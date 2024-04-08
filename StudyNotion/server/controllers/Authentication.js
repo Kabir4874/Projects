@@ -4,6 +4,7 @@ const otpGenerator = require("otp-generator");
 const bcrypt = require("bcrypt");
 const Profile = require("../models/Profile");
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 // !sendOTP
 exports.sendOTP = async (req, res) => {
@@ -170,7 +171,71 @@ exports.signUp = async (req, res) => {
 // !login
 exports.login = async (req, res) => {
   try {
-  } catch (err) {}
+    // get data from request body
+    const { email, password } = req.body;
+
+    // validation of data
+    if (!email || !password) {
+      return res.status(403).json({
+        success: false,
+        message: "All fields are required, please try again",
+      });
+    }
+
+    // user check exists or not
+    const user = await User.findOne({ email }).populate("additionalDetails");
+    if (!user) {
+      return res.status(401).json({
+        success: false,
+        message: "User is not registered, please signup first",
+      });
+    }
+
+    // generate JWT, after password matching
+    if (await bcrypt.compare(password, user.password)) {
+      const payload = {
+        email: user.email,
+        id: user._id,
+        accountType: user.accountType,
+      };
+      const token = jwt.sign(payload, process.env.JWT_SECRET, {
+        expiresIn: "2h",
+      });
+      user.token = token;
+      user.password = undefined;
+
+      // create cookie and send response
+      const options = {
+        expires: new Date(Date.now() + 3 * 34 * 60 * 60 * 1000),
+        httpOnly: true,
+      };
+      res.cookie("token", token, options).status(200).json({
+        success: true,
+        token,
+        user,
+        message: "Logged in successfully",
+      });
+    } else {
+      return res.status(410).json({
+        success: false,
+        message: "Password is incorrect",
+      });
+    }
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({
+      success: false,
+      message: "Login Failure, Please try again",
+    });
+  }
 };
 
 // !change Password
+exports.changePassword = async (req, res) => {
+  // get data from req body
+  // get old password, new password, confirm new password
+  // validation
+  // update password on DB
+  // send mail-> password update
+  // return response
+};
