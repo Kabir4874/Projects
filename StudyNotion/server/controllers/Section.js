@@ -77,7 +77,7 @@ exports.updateSection = async (req, res) => {
   }
 };
 
-// delete section
+// !delete section
 exports.deleteSection = async (req, res) => {
   try {
     // get ID
