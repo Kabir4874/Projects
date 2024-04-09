@@ -14,7 +14,7 @@ const OTPSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now(),
-    expires: 60 * 5, //The document will be automatically deleted after 5-minutes of its creation
+    expires: 60 * 5 * 1000, //The document will be automatically deleted after 5-minutes of its creation
   },
 });
 
@@ -33,7 +33,7 @@ async function sendVerificationEMail(email, otp) {
     );
     console.log("Email sent successfully", mailResponse.response);
   } catch (error) {
-    console.log("Error occurred while sending verification email", error);
+    console.log("Error occured while sending verification email", error);
     throw error;
   }
 }
