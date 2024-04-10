@@ -4,6 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 import HighlightText from "../components/core/HomePage/HighlightText";
 import Button from "../components/core/HomePage/Button";
 import Banner from "../assets/Images/banner.mp4";
+import CodeBlocks from "../components/core/HomePage/CodeBlocks";
 
 const Home = () => {
   return (
@@ -48,7 +49,7 @@ const Home = () => {
 
         {/* Code Section 1  */}
         <div>
-          
+          <CodeBlocks/>
         </div>
       </div>
 
