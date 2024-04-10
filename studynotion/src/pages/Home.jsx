@@ -49,7 +49,30 @@ const Home = () => {
 
         {/* Code Section 1  */}
         <div>
-          <CodeBlocks/>
+          <CodeBlocks
+            position={"lg:flex-row"}
+            heading={
+              <div className="text-4xl font-semibold">
+                Unlock your <HighlightText text={"coding potential"} /> with our
+                online courses.
+              </div>
+            }
+            subHeading={
+              "Our courses are designed and taught by industry experts who have years of experience in coding and are passionate about sharing their knowledge with you."
+            }
+            btn1={{
+              btnText: "Try it Yourself",
+              linkTo: "/signup",
+              active: true,
+            }}
+            btn2={{
+              btnText: "Learn More",
+              linkTo: "/login",
+              active: false,
+            }}
+            codeBlock={`<!DOCTYPE html>\n<html>\n<head><title>Example<title><linkrel="stylesheet"href="styles.css">\n</head>\n`}
+            codeColor={"text-yellow-25"}
+          />
         </div>
       </div>
 
