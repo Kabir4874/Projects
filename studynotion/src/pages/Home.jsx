@@ -5,6 +5,8 @@ import HighlightText from "../components/core/HomePage/HighlightText";
 import Button from "../components/core/HomePage/Button";
 import Banner from "../assets/Images/banner.mp4";
 import CodeBlocks from "../components/core/HomePage/CodeBlocks";
+import TimeLineSection from "../components/core/HomePage/TimeLineSection";
+import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection";
 
 const Home = () => {
   return (
@@ -74,9 +76,77 @@ const Home = () => {
             codeColor={"text-yellow-25"}
           />
         </div>
+
+        {/* Code Section 2  */}
+        <div>
+          <CodeBlocks
+            position={"lg:flex-row-reverse"}
+            heading={
+              <div className="text-4xl font-semibold">
+                Unlock your <HighlightText text={"coding potential"} /> with our
+                online courses.
+              </div>
+            }
+            subHeading={
+              "Our courses are designed and taught by industry experts who have years of experience in coding and are passionate about sharing their knowledge with you."
+            }
+            btn1={{
+              btnText: "Try it Yourself",
+              linkTo: "/signup",
+              active: true,
+            }}
+            btn2={{
+              btnText: "Learn More",
+              linkTo: "/login",
+              active: false,
+            }}
+            codeBlock={`<!DOCTYPE html>\n<html>\n<head><title>Example<title><linkrel="stylesheet"href="styles.css">\n</head>\n`}
+            codeColor={"text-yellow-25"}
+          />
+        </div>
       </div>
 
       {/* Section 2  */}
+      <div className=" bg-pureGreys-5 text-richBlack-700">
+        <div className="homepage_bg h-[310px]">
+          <div className=" w-11/12 max-w-maxContent flex flex-col items-center gap-5 mx-auto">
+            <div className="h-[150px]"></div>
+            <div className="flex gap-7 text-white">
+              <Button active={true} linkTo={"/signup"}>
+                <div className="flex items-center gap-3">
+                  Explore Full Catalog <FaArrowRight />
+                </div>
+              </Button>
+
+              <Button active={false} linkTo={"/signup"}>
+                <div>Learn More</div>
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        <div className=" mx-auto w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-7">
+          <div className="flex gap-5 items-start mt-20">
+            <div className=" text-richBlack-900 font-inter text-4xl font-semibold leading-[2.75rem] tracking-[-0.045rem]">
+              Get the skills you need for a{" "}
+              <HighlightText text={"job that is in demand."} />
+            </div>
+
+            <div className="flex flex-col gap-10 items-start">
+              <p className=" text-richBlack-700 font-inter font-medium leading-6">
+                The modern StudyNotion is the dictates its own terms. Today, to
+                be a competitive specialist requires more than professional
+                skills.
+              </p>
+              <Button active={false} linkTo={"/signup"}>
+                Learn More
+              </Button>
+            </div>
+          </div>
+          <TimeLineSection />
+          <LearningLanguageSection />
+        </div>
+      </div>
 
       {/* Section 3  */}
 
