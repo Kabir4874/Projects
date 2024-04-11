@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 body {
   overflow-x: hidden;
 }
@@ -14,7 +13,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .homepage_bg {
   background: url("./assets/Images/bghome.svg");
 }
