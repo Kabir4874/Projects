@@ -79,5 +79,4 @@ const TimeLineSection = () => {
     </div>
   );
 };
-
 export default TimeLineSection;
