@@ -8,6 +8,8 @@ import CodeBlocks from "../components/core/HomePage/CodeBlocks";
 import TimeLineSection from "../components/core/HomePage/TimeLineSection";
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection";
 import InstructorSection from "../components/core/HomePage/InstructorSection";
+import Footer from "../components/common/Footer";
+import ExploreMore from "../components/core/HomePage/ExploreMore";
 
 const Home = () => {
   return (
@@ -105,6 +107,8 @@ const Home = () => {
             codeColor={"text-yellow-25"}
           />
         </div>
+
+        <ExploreMore />
       </div>
 
       {/* Section 2  */}
@@ -158,6 +162,7 @@ const Home = () => {
       </div>
 
       {/* Footer  */}
+      <Footer />
     </div>
   );
 };

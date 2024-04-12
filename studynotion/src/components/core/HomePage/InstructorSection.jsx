@@ -1,6 +1,8 @@
 import React from "react";
 import Instructor from "../../../assets/Images/Instructor.png";
 import HighlightText from "./HighlightText";
+import Button from "./Button";
+import { FaArrowRight } from "react-icons/fa";
 
 const InstructorSection = () => {
   return (
@@ -18,7 +20,14 @@ const InstructorSection = () => {
             Instructors from around the world teach millions of students on
             StudyNotion. We provide the tools and skills to teach what you love.
           </p>
-          
+          <div className=" w-fit">
+            <Button active={true} linkTo={"/signup"}>
+              <div className="flex gap-2 items-center">
+                <p>Start Learning Today</p>
+                <FaArrowRight />
+              </div>
+            </Button>
+          </div>
         </div>
       </div>
     </div>
