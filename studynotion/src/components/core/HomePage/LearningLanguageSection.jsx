@@ -7,7 +7,7 @@ import Button from "./Button";
 
 const LearningLanguageSection = () => {
   return (
-    <div className=" mt-24">
+    <div className=" my-24">
       <div className="flex flex-col gap-6 items-center">
         <div className=" text-richBlack-900 font-inter text-4xl font-semibold leading-[2.75rem] tracking-[-0.045rem]">
           Your swiss knife for <HighlightText text={"learning any language"} />
