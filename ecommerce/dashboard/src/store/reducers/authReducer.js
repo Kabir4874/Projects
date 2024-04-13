@@ -8,6 +8,7 @@ export const admin_login = createAsyncThunk(
       const { data } = await api.post("/admin-login", info, {
         withCredentials: true,
       });
+      localStorage.setItem("accessToken", data.token);
       return fulfillWithValue(data);
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -23,14 +24,19 @@ export const authReducer = createSlice({
     loader: false,
     userInfo: "",
   },
-  reducers: {},
+  reducers: {
+    messageClear: (state, _) => {
+      state.errorMessage = "";
+    },
+  },
   extraReducers: (builder) => {
     builder
-      .addCase(admin_login.pending, (state, { payload }) => {
+      .addCase(admin_login.pending, (state, _) => {
         state.loader = true;
       })
       .addCase(admin_login.fulfilled, (state, { payload }) => {
         state.loader = false;
+        state.successMessage = payload.message;
       })
       .addCase(admin_login.rejected, (state, { payload }) => {
         state.loader = false;
@@ -39,4 +45,5 @@ export const authReducer = createSlice({
   },
 });
 
+export const { messageClear } = authReducer.actions;
 export default authReducer.reducer;
