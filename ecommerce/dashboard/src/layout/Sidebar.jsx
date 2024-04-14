@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { getNavs } from "../navigation";
 import { BiLogInCircle } from "react-icons/bi";
 
-const Sidebar = () => {
+const Sidebar = ({ showSidebar, setShowSidebar }) => {
   const { pathname } = useLocation();
   const [allNav, setAllNav] = useState([]);
   useEffect(() => {
@@ -12,9 +12,16 @@ const Sidebar = () => {
   }, []);
   return (
     <div>
-      <div></div>
       <div
-        className={`w-[260px] fixed bg-Blue z-50 top-0 h-screen shadow-[0_0_15px_0_rgb(34_41_47_/_5%)] transition-all`}
+        className={`fixed duration-200 ${
+          !showSidebar ? " invisible" : " visible"
+        } w-screen h-screen bg-dark2 top-0 left-0 z-10`}
+        onClick={() => setShowSidebar(false)}
+      ></div>
+      <div
+        className={`w-[260px] fixed bg-Blue z-50 top-0 h-screen shadow-[0_0_15px_0_rgb(34_41_47_/_5%)] transition-all ${
+          showSidebar ? "left-0" : "-left-[260px] lg:left-0"
+        }`}
       >
         <div className="h-[70px] flex justify-center items-center">
           <Link className="w-[180px] h-[50px]" to={"/"}>
@@ -33,7 +40,7 @@ const Sidebar = () => {
                   className={`${
                     pathname === nav.path
                       ? " bg-slate-600 shadow-indigo-500/30 text-white duration-500"
-                      : " text-light font-normal duration-200"
+                      : " text-light font-normal duration-300"
                   } px-3 py-[9px] rounded-sm flex justify-start items-center gap-3 hover:pl-4 transition-all w-full mb-4 text-xl`}
                   to={nav.path}
                 >
@@ -43,7 +50,7 @@ const Sidebar = () => {
               </li>
             ))}
             <li>
-              <button className="px-3 py-[9px] rounded-sm flex justify-start items-center gap-3 hover:pl-4 transition-all w-full mb-4 text-xl text-light font-normal duration-200">
+              <button className="px-3 py-[9px] rounded-sm flex justify-start items-center gap-3 hover:pl-4 transition-all w-full mb-4 text-xl text-light font-normal duration-300">
                 <span>
                   <BiLogInCircle />
                 </span>
