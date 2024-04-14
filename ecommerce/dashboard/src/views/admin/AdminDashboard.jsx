@@ -253,23 +253,25 @@ const AdminDashboard = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className="py-3 px-4 font-medium whitespace-nowrap">
-                  #455fdf5sf
-                </td>
-                <td className="py-3 px-4 font-medium whitespace-nowrap">
-                  $646
-                </td>
-                <td className="py-3 px-4 font-medium whitespace-nowrap">
-                  <span>pending</span>
-                </td>
-                <td className="py-3 px-4 font-medium whitespace-nowrap">
-                  <span>pending</span>
-                </td>
-                <td className="py-3 px-4 font-medium whitespace-nowrap">
-                  <Link>view</Link>
-                </td>
-              </tr>
+              {[1, 2, 3, 4, 5].map((item, index) => (
+                <tr key={index}>
+                  <td className="py-3 px-4 font-medium whitespace-nowrap">
+                    #455fdf5sf
+                  </td>
+                  <td className="py-3 px-4 font-medium whitespace-nowrap">
+                    $646
+                  </td>
+                  <td className="py-3 px-4 font-medium whitespace-nowrap">
+                    <span>pending</span>
+                  </td>
+                  <td className="py-3 px-4 font-medium whitespace-nowrap">
+                    <span>pending</span>
+                  </td>
+                  <td className="py-3 px-4 font-medium whitespace-nowrap">
+                    <Link>View</Link>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
