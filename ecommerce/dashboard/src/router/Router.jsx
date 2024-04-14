@@ -1,4 +1,4 @@
-const { useRoutes } = require("react-router-dom");
+import { useRoutes } from "react-router-dom";
 
 const Router = ({ allRoutes }) => {
   const routes = useRoutes([...allRoutes]);
