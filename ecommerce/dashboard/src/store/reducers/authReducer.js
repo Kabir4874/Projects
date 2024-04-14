@@ -26,18 +26,16 @@ export const authReducer = createSlice({
   },
   reducers: {},
   extraReducers: (builder) => {
-    // builder
-    //   .addCase(adminLogin.pending, (state) => {
-    //     state.loader = true;
-    //   })
-    //   .addCase(adminLogin.fulfilled, (state) => {
-    //     state.loader = false;
-    //     // You might update other state properties here upon successful login
-    //   })
-    //   .addCase(adminLogin.rejected, (state) => {
-    //     state.loader = false;
-    //     // You might handle login failure here, e.g., display an error message
-    //   });
+    builder
+      .addCase(admin_login.pending, (state ,{payload}) => {
+        state.loader = true;
+      })
+      .addCase(admin_login.fulfilled, (state) => {
+        state.loader = false;
+      })
+      .addCase(admin_login.rejected, (state) => {
+        state.loader = false;
+      });
   },
 });
 
