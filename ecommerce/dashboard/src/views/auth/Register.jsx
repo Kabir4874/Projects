@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineGooglePlus } from "react-icons/ai";
 import { FiFacebook, FiTwitter } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 
 const Register = () => {
+  const [state, setState] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  const inputHandler = (event) => {
+    setState({
+      ...state,
+      [event.target.name]: event.target.value,
+    });
+  };
+  const submitHandler = (event) => {
+    event.preventDefault();
+    console.log(state);
+  };
   return (
     <div className=" w-screen h-screen bg-dark flex justify-center items-center">
       <div className="w-[350px] text-light p-2">
@@ -13,7 +28,7 @@ const Register = () => {
           <p className="text-sm mb-3">
             Please Register and start your business
           </p>
-          <form action="">
+          <form action="" onSubmit={submitHandler}>
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="name">Name</label>
               <input
@@ -22,6 +37,8 @@ const Register = () => {
                 placeholder="name"
                 id="name"
                 required
+                value={state.name}
+                onChange={inputHandler}
                 className="px-3 py-2 outline-none border border-slate-700 bg-transparent rounded-md text-light focus:border-indigo-500 overflow-hidden"
               />
             </div>
@@ -33,6 +50,8 @@ const Register = () => {
                 placeholder="email"
                 id="email"
                 required
+                value={state.email}
+                onChange={inputHandler}
                 className="px-3 py-2 outline-none border border-slate-700 bg-transparent rounded-md text-light focus:border-indigo-500 overflow-hidden"
               />
             </div>
@@ -44,6 +63,8 @@ const Register = () => {
                 placeholder="password"
                 id="password"
                 required
+                value={state.password}
+                onChange={inputHandler}
                 className="px-3 py-2 outline-none border border-slate-700 bg-transparent rounded-md text-light focus:border-indigo-500 overflow-hidden"
               />
             </div>
@@ -80,17 +101,17 @@ const Register = () => {
                   <AiOutlineGooglePlus />
                 </span>
               </div>
-              <div className="w-[35px] h-[35px] flex rounded-md bg-orange-700 shadow-lg hover:shadow-orange-700/50 justify-center cursor-pointer items-center overflow-hidden">
+              <div className="w-[35px] h-[35px] flex rounded-md bg-indigo-700 shadow-lg hover:shadow-indigo-700/50 justify-center cursor-pointer items-center overflow-hidden">
                 <span>
                   <FiFacebook />
                 </span>
               </div>
-              <div className="w-[35px] h-[35px] flex rounded-md bg-orange-700 shadow-lg hover:shadow-orange-700/50 justify-center cursor-pointer items-center overflow-hidden">
+              <div className="w-[35px] h-[35px] flex rounded-md bg-cyan-700 shadow-lg hover:shadow-cyan-700/50 justify-center cursor-pointer items-center overflow-hidden">
                 <span>
                   <FiTwitter />
                 </span>
               </div>
-              <div className="w-[35px] h-[35px] flex rounded-md bg-orange-700 shadow-lg hover:shadow-orange-700/50 justify-center cursor-pointer items-center overflow-hidden">
+              <div className="w-[35px] h-[35px] flex rounded-md bg-purple-700 shadow-lg hover:shadow-purple-700/50 justify-center cursor-pointer items-center overflow-hidden">
                 <span>
                   <FaGithub />
                 </span>
