@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { admin_login } from "../../store/reducers/authReducer";
+import { useDispatch, useSelector } from "react-redux";
 
 const AdminLogin = () => {
+  const dispatch = useDispatch();
   const [state, setState] = useState({
     email: "",
     password: "",
@@ -13,7 +16,7 @@ const AdminLogin = () => {
   };
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(state);
+    dispatch(admin_login(state));
   };
   return (
     <div className=" w-screen h-screen bg-dark flex justify-center items-center">
