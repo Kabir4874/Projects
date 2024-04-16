@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Pagination from "../Pagination";
+import { BsImage } from "react-icons/bs";
 
 const Category = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -89,9 +90,35 @@ const Category = () => {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-5/12">
-          <div className="w-full p-4 bg-Blue rounded-md">
-            
+        <div
+          className={`w-[320px] lg:w-5/12 translate-x-100 lg:relative lg:right-0 fixed ${
+            show ? "right-0" : " -right-[340px]"
+          } z-20 top-0 transition-all duration-500`}
+        >
+          <div className="w-full pl-5">
+            <div className=" bg-Blue h-screen lg:h-auto px-3 py-2 lg:rounded-md text-light">
+              <h1 className=" text-light font-semibold text-xl mb-4 w-full text-center">
+                Add Category
+              </h1>
+              <form action="">
+                <div className="flex flex-col w-full gap-2 mb-3">
+                  <label htmlFor="name">Category name</label>
+                  <input
+                    type="text"
+                    placeholder="category name"
+                    id="name"
+                    name="category_name"
+                    className="px-4 py-2 focus:border-indigo-500 outline-none bg-Blue border border-slate-700 rounded-md text-light"
+                  />
+                </div>
+                <div>
+                    <label htmlFor="image">
+                        <span><BsImage/></span>
+                        <span>select Image</span>
+                    </label>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
