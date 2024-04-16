@@ -248,7 +248,7 @@ const AdminDashboard = () => {
                   Order Status
                 </th>
                 <th scope="col" className="py-3 px-4">
-                  Active
+                  Action
                 </th>
               </tr>
             </thead>
