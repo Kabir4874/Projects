@@ -112,10 +112,26 @@ const Category = () => {
                   />
                 </div>
                 <div>
-                    <label htmlFor="image">
-                        <span><BsImage/></span>
-                        <span>select Image</span>
-                    </label>
+                  <label
+                    htmlFor="image"
+                    className="flex justify-center items-center flex-col h-[238px] cursor-pointer border border-dashed hover:border-indigo-500 w-full border-light"
+                  >
+                    <span>
+                      <BsImage />
+                    </span>
+                    <span>select Image</span>
+                  </label>
+                  <input
+                    type="file"
+                    name="image"
+                    id="image"
+                    className="hidden"
+                  />
+                </div>
+                <div>
+                  <button className=" bg-blue-500 w-full hover:shadow-blue-500/50 hover:shadow-lg text-white rounded-md px-7 py-2 my-2">
+                    Add Category
+                  </button>
                 </div>
               </form>
             </div>
