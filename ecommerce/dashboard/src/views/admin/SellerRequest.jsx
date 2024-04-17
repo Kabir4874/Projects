@@ -3,7 +3,7 @@ import Pagination from "../Pagination";
 import { Link } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 
-const Sellers = () => {
+const SellerRequest = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchValue, setSearchValue] = useState("");
   const [perPage, setPerPage] = useState(5);
@@ -34,25 +34,16 @@ const Sellers = () => {
                   No
                 </th>
                 <th scope="col" className="py-3 px-4">
-                  Image
-                </th>
-                <th scope="col" className="py-3 px-4">
                   Name
                 </th>
                 <th scope="col" className="py-3 px-4">
                   Email
                 </th>
                 <th scope="col" className="py-3 px-4">
-                  Shop Name
-                </th>
-                <th scope="col" className="py-3 px-4">
                   Payment Status
                 </th>
                 <th scope="col" className="py-3 px-4">
-                  Division
-                </th>
-                <th scope="col" className="py-3 px-4">
-                  District
+                  Status
                 </th>
                 <th scope="col" className="py-3 px-4">
                   Action
@@ -61,17 +52,8 @@ const Sellers = () => {
             </thead>
             <tbody>
               {[1, 2, 3, 4, 5].map((item, index) => (
-                <tr key={index}>
-                  <td className="py-3 px-4   whitespace-nowrap">
-                    {item}
-                  </td>
-                  <td className="py-3 px-4   whitespace-nowrap">
-                    <img
-                      src={`http://localhost:3000/images/category/${item}.jpg`}
-                      alt="category"
-                      className="w-[45px] h-[45px]"
-                    />
-                  </td>
+                <tr key={index} className="border-b border-slate-700">
+                  <td className="py-3 px-4   whitespace-nowrap">{item}</td>
                   <td className="py-3 px-4   whitespace-nowrap">
                     <span>Adnan Ahmed</span>
                   </td>
@@ -79,16 +61,10 @@ const Sellers = () => {
                     <span>adnan@gmail.com</span>
                   </td>
                   <td className="py-3 px-4   whitespace-nowrap">
-                    <span>Adnan Fashion</span>
+                    <span>inactive</span>
                   </td>
                   <td className="py-3 px-4   whitespace-nowrap">
                     <span>pending</span>
-                  </td>
-                  <td className="py-3 px-4   whitespace-nowrap">
-                    <span>Dhaka</span>
-                  </td>
-                  <td className="py-3 px-4   whitespace-nowrap">
-                    <span>Dhaka</span>
                   </td>
                   <td className="py-3 px-4   whitespace-nowrap">
                     <div className="flex justify-start items-center gap-4">
@@ -117,4 +93,4 @@ const Sellers = () => {
   );
 };
 
-export default Sellers;
+export default SellerRequest;

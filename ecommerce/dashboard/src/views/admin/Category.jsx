@@ -59,20 +59,18 @@ const Category = () => {
                 <tbody>
                   {[1, 2, 3, 4, 5].map((item, index) => (
                     <tr key={index}>
-                      <td className="py-3 px-4 font-medium whitespace-nowrap">
-                        {item}
-                      </td>
-                      <td className="py-3 px-4 font-medium whitespace-nowrap">
+                      <td className="py-3 px-4  whitespace-nowrap">{item}</td>
+                      <td className="py-3 px-4  whitespace-nowrap">
                         <img
                           src={`http://localhost:3000/images/category/${item}.jpg`}
                           alt="category"
                           className="w-[45px] h-[45px]"
                         />
                       </td>
-                      <td className="py-3 px-4 font-medium whitespace-nowrap">
+                      <td className="py-3 px-4  whitespace-nowrap">
                         <span>Sports</span>
                       </td>
-                      <td className="py-3 px-4 font-medium whitespace-nowrap">
+                      <td className="py-3 px-4  whitespace-nowrap">
                         <div className="flex justify-start items-center gap-4">
                           <Link className="p-[6px] bg-yellow-600 rounded-sm hover:shadow-lg hover:shadow-yellow-600/50 flex items-center justify-center">
                             <FaEdit />
