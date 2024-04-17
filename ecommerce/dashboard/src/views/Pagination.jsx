@@ -29,6 +29,7 @@ const Pagination = ({
               : " bg-slate-700 hover:bg-indigo-500 shadow-lg hover:shadow-indigo-500/50 hover:text-white text-light"
           } w-[33px] h-[33px] rounded-full flex justify-center items-center cursor-pointer select-none`}
           onClick={() => setPageNumber(i)}
+          key={i}
         >
           {i}
         </li>

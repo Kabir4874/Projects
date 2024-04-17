@@ -11,7 +11,7 @@ const Orders = () => {
   return (
     <div className="px-2 lg:px-8 pt-5">
       <div className="w-full p-4 bg-Blue rounded-md">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mb-4">
           <select
             className="px-4 py-2 focus:border-indigo-500 outline-none bg-Blue border border-slate-700 rounded-md text-light"
             onChange={(e) => setPerPage(parseInt(e.target.value))}

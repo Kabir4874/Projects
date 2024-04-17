@@ -3,7 +3,7 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Pagination from "../Pagination";
 import { BsImage } from "react-icons/bs";
-
+import { AiOutlineClose } from "react-icons/ai";
 const Category = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchValue, setSearchValue] = useState("");
@@ -11,10 +11,19 @@ const Category = () => {
   const [show, setShow] = useState(false);
   return (
     <div className="px-2 lg:px-7 pt-5">
+      <div className="flex lg:hidden justify-between items-center mb-5 p-4 bg-Blue rounded-md">
+        <h1 className=" text-light font-semibold text-lg">Categories</h1>
+        <button
+          className="bg-indigo-500 shadow-lg hover:shadow-indigo-500/50 px-4 py-2 cursor-pointer text-white rounded-sm"
+          onClick={() => setShow(true)}
+        >
+          Add
+        </button>
+      </div>
       <div className="flex flex-wrap w-full">
         <div className="w-full lg:w-7/12">
           <div className="w-full p-4 bg-Blue rounded-md">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center mb-4">
               <select
                 className="px-4 py-2 focus:border-indigo-500 outline-none bg-Blue border border-slate-700 rounded-md text-light"
                 onChange={(e) => setPerPage(parseInt(e.target.value))}
@@ -93,13 +102,21 @@ const Category = () => {
         <div
           className={`w-[320px] lg:w-5/12 translate-x-100 lg:relative lg:right-0 fixed ${
             show ? "right-0" : " -right-[340px]"
-          } z-20 top-0 transition-all duration-500`}
+          } z-50 top-0 transition-all duration-500 `}
         >
-          <div className="w-full pl-5">
-            <div className=" bg-Blue h-screen lg:h-auto px-3 py-2 lg:rounded-md text-light">
-              <h1 className=" text-light font-semibold text-xl mb-4 w-full text-center">
-                Add Category
-              </h1>
+          <div className="w-full pl-5 ">
+            <div className=" bg-Blue h-screen lg:h-auto px-3 py-2 lg:rounded-md text-light ">
+              <div className="flex justify-between items-center  mb-4 mt-8 lg:mt-0">
+                <h1 className=" text-light font-semibold text-xl lg:w-full lg:text-center">
+                  Add Category
+                </h1>
+                <div
+                  className="block lg:hidden text-light cursor-pointer"
+                  onClick={() => setShow(false)}
+                >
+                  <AiOutlineClose size={20} />
+                </div>
+              </div>
               <form action="">
                 <div className="flex flex-col w-full gap-2 mb-3">
                   <label htmlFor="name">Category name</label>
