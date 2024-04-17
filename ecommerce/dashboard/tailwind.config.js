@@ -10,6 +10,7 @@ module.exports = {
         dark2:'#22292f80',
         dark3:'#28c76f1f',
         dark4:'#e000e81f',
+        dark5:'#252b3b',
         Green:'#28c76f',
       },
     },
