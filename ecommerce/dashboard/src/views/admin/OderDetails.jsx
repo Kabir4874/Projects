@@ -88,6 +88,33 @@ const OderDetails = () => {
                 </div>
               </div>
             </div>
+            <div className="w-[68%]">
+              <div className="pl-3">
+                <div className="mt-4 flex flex-col">
+                  <div className=" text-light mb-6">
+                    <div className="flex justify-start items-center gap-3">
+                      <h2>Seller 1 order: </h2>
+                      <span>pending</span>
+                    </div>
+                    <div className="flex gap-3 text-md mt-2">
+                      <img
+                        src="http://localhost:3000/images/category/1.jpg"
+                        alt=""
+                        className="w-[45px] h-[45px]"
+                      />
+                      <div>
+                        <h2>long long T-shirt</h2>
+                        <p>
+                          <span>Brand: </span>
+                          <span>Easy </span>
+                          <span className="text-lg">Quantity: 2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
