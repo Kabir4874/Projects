@@ -62,9 +62,7 @@ const Sellers = () => {
             <tbody>
               {[1, 2, 3, 4, 5].map((item, index) => (
                 <tr key={index}>
-                  <td className="py-3 px-4   whitespace-nowrap">
-                    {item}
-                  </td>
+                  <td className="py-3 px-4   whitespace-nowrap">{item}</td>
                   <td className="py-3 px-4   whitespace-nowrap">
                     <img
                       src={`http://localhost:3000/images/category/${item}.jpg`}
@@ -92,7 +90,10 @@ const Sellers = () => {
                   </td>
                   <td className="py-3 px-4   whitespace-nowrap">
                     <div className="flex justify-start items-center gap-4">
-                      <Link className="p-[6px] bg-green-600 rounded-sm hover:shadow-lg hover:shadow-green-600/50 flex items-center justify-center">
+                      <Link
+                        to="/admin/dashboard/seller/details/:1"
+                        className="p-[6px] bg-green-600 rounded-sm hover:shadow-lg hover:shadow-green-600/50 flex items-center justify-center"
+                      >
                         <FaEye />
                       </Link>
                     </div>
