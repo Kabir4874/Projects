@@ -1,7 +1,6 @@
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BsCurrencyDollar } from "react-icons/bs";
-import { FaUsers } from "react-icons/fa";
 import { RiProductHuntLine } from "react-icons/ri";
 import Chart from "react-apexcharts";
 import { Link } from "react-router-dom";
@@ -95,7 +94,7 @@ const SellerDashboard = () => {
     },
   };
   return (
-    <div className="px-2 md:px-8 py-6">
+    <div className="px-2 md:px-7 py-5">
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div className="flex justify-between items-center p-6 bg-Blue rounded-md gap-4">
           <div className="flex flex-col justify-start items-start text-light">

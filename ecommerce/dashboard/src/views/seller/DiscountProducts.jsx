@@ -4,7 +4,7 @@ import Pagination from "../Pagination";
 import { Link } from "react-router-dom";
 import { FaEdit, FaEye, FaTrash } from "react-icons/fa";
 
-const Products = () => {
+const DiscountProducts = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchValue, setSearchValue] = useState("");
   const [perPage, setPerPage] = useState(5);
@@ -114,4 +114,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default DiscountProducts;
