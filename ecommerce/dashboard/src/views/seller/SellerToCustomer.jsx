@@ -16,7 +16,7 @@ const SellerToCustomer = () => {
           >
             <div className="w-full h-[calc(100vh-177px)] bg-dark5 md:bg-transparent overflow-y-auto">
               <div className="flex text-xl justify-between items-center p-4 md:p-0 md:px-3 md:pb-3 text-white">
-                <h2>Sellers</h2>
+                <h2>Customers</h2>
                 <span
                   className="block cursor-pointer md:hidden"
                   onClick={() => setShow(!show)}
@@ -106,6 +106,9 @@ const SellerToCustomer = () => {
                     />
                     <div className="w-[15px] h-[15px] rounded-full bg-green-500 absolute z-10 right-0 bottom-0"></div>
                   </div>
+                  <h2 className=" text-white font-semibold text-lg">
+                    Rakib Khan
+                  </h2>
                 </div>
               )}
               <div

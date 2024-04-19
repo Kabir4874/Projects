@@ -106,6 +106,7 @@ const ChatSeller = () => {
                     />
                     <div className="w-[15px] h-[15px] rounded-full bg-green-500 absolute z-10 right-0 bottom-0"></div>
                   </div>
+                  <h2 className=" text-white font-semibold text-lg">Rakib Khan</h2>
                 </div>
               )}
               <div
