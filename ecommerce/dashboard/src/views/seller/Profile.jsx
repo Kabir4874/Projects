@@ -163,52 +163,42 @@ const Profile = () => {
         </div>
         <div className="w-full md:w-6/12">
           <div className="w-full p-8 bg-Blue rounded-md text-light">
-            <h2 className=" text-light text-xl font-semibold">
+            <h2 className=" text-light text-lg font-semibold">
               Change Password
             </h2>
             <form action="" className="mt-4">
               <div className="flex flex-col w-full gap-1 mb-3">
-                <label htmlFor="shop">Shop Name</label>
+                <label htmlFor="email">Email</label>
                 <input
-                  type="text"
-                  placeholder="shop name"
-                  name="shop"
-                  id="shop"
+                  type="email"
+                  placeholder="email"
+                  name="email"
+                  id="email"
                   className="px-4 py-2 focus:border-indigo-500 outline-none bg-Blue border border-slate-700 rounded-md text-light"
                 />
               </div>
               <div className="flex flex-col w-full gap-1 mb-3">
-                <label htmlFor="division">Division</label>
+                <label htmlFor="oldPassword">Old Password</label>
                 <input
-                  type="text"
-                  placeholder="Division"
-                  name="division"
-                  id="division"
+                  type="password"
+                  placeholder="old password"
+                  name="oldPassword"
+                  id="oldPassword"
                   className="px-4 py-2 focus:border-indigo-500 outline-none bg-Blue border border-slate-700 rounded-md text-light"
                 />
               </div>
               <div className="flex flex-col w-full gap-1 mb-3">
-                <label htmlFor="district">District</label>
+                <label htmlFor="newPassword">New Password</label>
                 <input
-                  type="text"
-                  placeholder="District"
-                  name="district"
-                  id="district"
-                  className="px-4 py-2 focus:border-indigo-500 outline-none bg-Blue border border-slate-700 rounded-md text-light"
-                />
-              </div>
-              <div className="flex flex-col w-full gap-1 mb-3">
-                <label htmlFor="subDistrict">Sub District</label>
-                <input
-                  type="text"
-                  placeholder="Sub District"
-                  name="subDistrict"
-                  id="subDistrict"
+                  type="password"
+                  placeholder="new password"
+                  name="newPassword"
+                  id="newPassword"
                   className="px-4 py-2 focus:border-indigo-500 outline-none bg-Blue border border-slate-700 rounded-md text-light"
                 />
               </div>
               <button className=" bg-blue-500 hover:shadow-blue-500/50  hover:shadow-lg text-white rounded-md px-7 py-2 my-2">
-                Submit
+                Update
               </button>
             </form>
           </div>
