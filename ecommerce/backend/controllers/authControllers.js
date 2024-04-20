@@ -30,6 +30,10 @@ class authControllers {
     }
   };
 
+  seller_register = async (req, res) => {
+    console.log(req.body);
+  };
+
   getUser = async (req, res) => {
     const { id, role } = req;
     try {

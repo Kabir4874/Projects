@@ -16,6 +16,23 @@ export const admin_login = createAsyncThunk(
   }
 );
 
+export const seller_register = createAsyncThunk(
+  "auth/seller_register",
+  async (info, { rejectWithValue, fulfillWithValue }) => {
+    console.log(info);
+    try {
+      const { data } = await api.post("/seller-register", info, {
+        withCredentials: true,
+      });
+      // localStorage.setItem("accessToken", data.token);
+      console.log(data);
+      return fulfillWithValue(data);
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
 export const authReducer = createSlice({
   name: "auth",
   initialState: {
