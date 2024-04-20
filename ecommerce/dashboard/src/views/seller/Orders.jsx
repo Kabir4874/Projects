@@ -54,7 +54,10 @@ const Orders = () => {
                   </td>
                   <td className="py-3 px-4 font-medium whitespace-nowrap">
                     <div className="flex justify-start items-center gap-4">
-                      <Link className="p-[6px] bg-green-600 rounded-sm hover:shadow-lg hover:shadow-green-600/50 flex items-center justify-center">
+                      <Link
+                        to={`/seller/dashboard/order/details/1`}
+                        className="p-[6px] bg-green-600 rounded-sm hover:shadow-lg hover:shadow-green-600/50 flex items-center justify-center"
+                      >
                         <FaEye />
                       </Link>
                     </div>

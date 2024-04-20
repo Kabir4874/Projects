@@ -73,15 +73,10 @@ const EditProduct = () => {
     });
   };
 
-  const changeImage = (img, index) => {
-    if (img) {
-      let tempUrl = imageShow;
-      let tempImages = images;
-
-      tempImages[index] = img;
-      tempUrl[index] = { url: URL.createObjectURL(img) };
-      setImageShow([...tempUrl]);
-      setImages([...tempImages]);
+  const changeImage = (img, files) => {
+    if (files.length > 0) {
+      console.log(img);
+      console.log(files[0]);
     }
   };
 
@@ -250,7 +245,21 @@ const EditProduct = () => {
                 className="px-4 py-2 focus:border-indigo-500 outline-none bg-Blue border border-slate-700 rounded-md text-light"
               ></textarea>
             </div>
-            <div className="grid lg:grid-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 sm:gap-4  gap-3 w-full text-light mb-4"></div>
+            <div className="grid lg:grid-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 sm:gap-4  gap-3 w-full text-light mb-4">
+              {imageShow.map((img, index) => (
+                <div key={index}>
+                  <label htmlFor={index}>
+                    <img src={img} alt="" />
+                  </label>
+                  <input
+                    onChange={(e) => changeImage(img, e.target.files)}
+                    type="file"
+                    id={index}
+                    className="hidden"
+                  />
+                </div>
+              ))}
+            </div>
             <div>
               <button className=" bg-blue-500 hover:shadow-blue-500/50 hover:shadow-lg text-white rounded-md px-7 py-2 my-2">
                 Update Product

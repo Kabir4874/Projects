@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 import { AiOutlineGooglePlus } from "react-icons/ai";
 import { FiFacebook, FiTwitter } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { PropagateLoader } from "react-spinners";
+import { overrideStyle } from "../../utils/utils";
 
 const Register = () => {
+  const { loader } = useSelector((state) => state.auth);
   const [state, setState] = useState({
     name: "",
     email: "",
@@ -20,6 +24,7 @@ const Register = () => {
     event.preventDefault();
     console.log(state);
   };
+
   return (
     <div className=" w-screen h-screen bg-dark flex justify-center items-center">
       <div className="w-[350px] text-light p-2">
@@ -80,8 +85,15 @@ const Register = () => {
                 I agree to privacy policy & terms
               </label>
             </div>
-            <button className=" bg-blue-500 w-full hover:shadow-blue-500/50 hover:shadow-lg text-white rounded-md px-7 py-2 mb-3">
-              Sign Up
+            <button
+              className=" bg-blue-500 w-full hover:shadow-blue-500/50 hover:shadow-lg text-white rounded-md px-7 py-2 mb-3"
+              disabled={loader ? true : false}
+            >
+              {loader ? (
+                <PropagateLoader cssOverride={overrideStyle} color="#fff" />
+              ) : (
+                "Register"
+              )}
             </button>
             <div className="flex items-center mb-3 gap-3 justify-center">
               <p>
