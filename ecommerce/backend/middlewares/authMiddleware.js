@@ -7,7 +7,7 @@ module.exports.authMiddleware = async (req, res, next) => {
     responseReturn(res, 409, { error: "Please Login First" });
   } else {
     try {
-      const deCodeToken = await jwt.verify(accessToken, process.env.SECRET);
+      const deCodeToken = jwt.verify(accessToken, process.env.SECRET);
       req.role = deCodeToken.role;
       req.id = deCodeToken.id;
       next();
