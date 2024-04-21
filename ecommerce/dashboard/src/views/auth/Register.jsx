@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineGooglePlus } from "react-icons/ai";
 import { FiFacebook, FiTwitter } from "react-icons/fi";
@@ -6,11 +6,19 @@ import { FaGithub } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { PropagateLoader } from "react-spinners";
 import { overrideStyle } from "../../utils/utils";
-import { seller_register } from "../../store/reducers/authReducer";
+import {
+  seller_register,
+  messageClear,
+} from "../../store/reducers/authReducer";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const dispatch = useDispatch();
-  const { loader } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
+  const { loader, successMessage, errorMessage } = useSelector(
+    (state) => state.auth
+  );
   const [state, setState] = useState({
     name: "",
     email: "",
@@ -26,6 +34,18 @@ const Register = () => {
     event.preventDefault();
     dispatch(seller_register(state));
   };
+
+  useEffect(() => {
+    if (errorMessage) {
+      toast.error(errorMessage);
+      dispatch(messageClear());
+    }
+    if (successMessage) {
+      toast.success(successMessage);
+      dispatch(messageClear());
+      navigate("/");
+    }
+  }, [errorMessage, successMessage]);
 
   return (
     <div className=" w-screen h-screen bg-dark flex justify-center items-center">

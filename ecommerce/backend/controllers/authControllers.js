@@ -49,10 +49,14 @@ class authControllers {
         await sellerCustomerModel.create({
           myId: seller.id,
         });
-        responseReturn(res, 201, { message: "Registered Successfully" });
+        const token = await createToken({ id: seller.id, role: seller.role });
+        res.cookie("accessToken", token, {
+          expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
+        });
+        responseReturn(res, 201, { token, message: "Registered Successfully" });
       }
     } catch (error) {
-      console.log(error);
+      responseReturn(res, 500, { error: "Internal Server Error" });
     }
   };
 
