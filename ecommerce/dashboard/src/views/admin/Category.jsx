@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import Pagination from "../Pagination";
 import { BsImage } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
+import { PropagateLoader } from "react-spinners";
+import { overrideStyle } from "../../utils/utils";
+import { useSelector } from "react-redux";
 const Category = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchValue, setSearchValue] = useState("");
@@ -13,6 +16,20 @@ const Category = () => {
     name: "",
     image: "",
   });
+  const [image, setImage] = useState("");
+  const imageHandler = (e) => {
+    let files = e.target.files;
+    if (files.length > 0) {
+      setImage(URL.createObjectURL(files[0]));
+      setState({
+        ...state,
+        image: files[0],
+      });
+    }
+  };
+  const { loader, successMessage, errorMessage } = useSelector(
+    (state) => state.auth
+  );
   return (
     <div className="px-2 lg:px-7 pt-5">
       <div className="flex lg:hidden justify-between items-center mb-5 p-4 bg-Blue rounded-md">
@@ -137,23 +154,40 @@ const Category = () => {
                 <div>
                   <label
                     htmlFor="image"
-                    className="flex justify-center items-center flex-col h-[238px] cursor-pointer border border-dashed hover:border-indigo-500 w-full border-light"
+                    className="flex justify-center items-center flex-col h-[330px] cursor-pointer border border-dashed hover:border-indigo-500 w-full border-light"
                   >
-                    <span>
-                      <BsImage />
-                    </span>
-                    <span>select Image</span>
+                    {image ? (
+                      <img src={image} alt="" className="w-full h-full" />
+                    ) : (
+                      <>
+                        <span>
+                          <BsImage />
+                        </span>
+                        <span>select Image</span>
+                      </>
+                    )}
                   </label>
                   <input
                     type="file"
                     name="image"
                     id="image"
+                    onChange={imageHandler}
                     className="hidden"
                   />
                 </div>
                 <div>
-                  <button className=" bg-blue-500 w-full hover:shadow-blue-500/50 hover:shadow-lg text-white rounded-md px-7 py-2 my-2">
-                    Add Category
+                  <button
+                    className=" bg-blue-500 w-full hover:shadow-blue-500/20 hover:shadow-lg text-white rounded-md px-7 py-2 mb-3 transition-all duration-200"
+                    disabled={loader ? true : false}
+                  >
+                    {loader ? (
+                      <PropagateLoader
+                        cssOverride={overrideStyle}
+                        color="#fff"
+                      />
+                    ) : (
+                      "Add Category"
+                    )}
                   </button>
                 </div>
               </form>
