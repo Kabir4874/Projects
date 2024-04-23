@@ -3,11 +3,11 @@ import api from "../../api/api";
 
 export const categoryAdd = createAsyncThunk(
   "category/categoryAdd",
-  async ({ name, image }, { rejectWithValue, fulfillWithValue }) => {
+  async (info, { rejectWithValue, fulfillWithValue }) => {
     try {
       const formData = new FormData();
-      formData.append("name", name);
-      formData.append("image", image);
+      formData.append("name", info.name);
+      formData.append("image", info.image);
       const { data } = await api.post("/category-add", formData, {
         withCredentials: true,
       });

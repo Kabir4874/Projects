@@ -10,9 +10,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { categoryAdd } from "../../store/reducers/categoryReducer";
 const Category = () => {
   const dispatch = useDispatch();
-  const { loader, successMessage, errorMessage } = useSelector(
-    (state) => state.auth
-  );
+  const { loader } = useSelector((state) => state.auth);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchValue, setSearchValue] = useState("");
   const [perPage, setPerPage] = useState(5);
