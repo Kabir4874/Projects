@@ -6,8 +6,13 @@ import { BsImage } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import { PropagateLoader } from "react-spinners";
 import { overrideStyle } from "../../utils/utils";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { categoryAdd } from "../../store/reducers/categoryReducer";
 const Category = () => {
+  const dispatch= useDispatch();
+  const { loader, successMessage, errorMessage } = useSelector(
+    (state) => state.auth
+  );
   const [currentPage, setCurrentPage] = useState(1);
   const [searchValue, setSearchValue] = useState("");
   const [perPage, setPerPage] = useState(5);
@@ -27,9 +32,11 @@ const Category = () => {
       });
     }
   };
-  const { loader, successMessage, errorMessage } = useSelector(
-    (state) => state.auth
-  );
+  const add_category = (e) => {
+    e.preventDefault();
+    console.log(state);
+  };
+  
   return (
     <div className="px-2 lg:px-7 pt-5">
       <div className="flex lg:hidden justify-between items-center mb-5 p-4 bg-Blue rounded-md">
@@ -136,7 +143,7 @@ const Category = () => {
                   <AiOutlineClose size={20} />
                 </div>
               </div>
-              <form action="">
+              <form action="" onSubmit={add_category}>
                 <div className="flex flex-col w-full gap-2 mb-3">
                   <label htmlFor="name">Category name</label>
                   <input
@@ -145,6 +152,7 @@ const Category = () => {
                     id="name"
                     name="category_name"
                     value={state.name}
+                    required
                     onChange={(e) =>
                       setState({ ...state, name: e.target.value })
                     }
@@ -171,11 +179,12 @@ const Category = () => {
                     type="file"
                     name="image"
                     id="image"
+                    required
                     onChange={imageHandler}
                     className="hidden"
                   />
                 </div>
-                <div>
+                <div className="mt-2">
                   <button
                     className=" bg-blue-500 w-full hover:shadow-blue-500/20 hover:shadow-lg text-white rounded-md px-7 py-2 mb-3 transition-all duration-200"
                     disabled={loader ? true : false}
