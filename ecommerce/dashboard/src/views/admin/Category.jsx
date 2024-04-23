@@ -9,7 +9,7 @@ import { overrideStyle } from "../../utils/utils";
 import { useSelector, useDispatch } from "react-redux";
 import { categoryAdd } from "../../store/reducers/categoryReducer";
 const Category = () => {
-  const dispatch= useDispatch();
+  const dispatch = useDispatch();
   const { loader, successMessage, errorMessage } = useSelector(
     (state) => state.auth
   );
@@ -35,8 +35,9 @@ const Category = () => {
   const add_category = (e) => {
     e.preventDefault();
     console.log(state);
+    dispatch(categoryAdd(state));
   };
-  
+
   return (
     <div className="px-2 lg:px-7 pt-5">
       <div className="flex lg:hidden justify-between items-center mb-5 p-4 bg-Blue rounded-md">
