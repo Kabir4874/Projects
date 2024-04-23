@@ -1,5 +1,7 @@
-class categoryControllers{
-
+class categoryControllers {
+  add_category = async (req, res) => {
+    console.log("Hello");
+  };
 }
 
-module.exports= new categoryControllers();
+module.exports = new categoryControllers();
