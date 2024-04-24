@@ -13,4 +13,4 @@ class categoryControllers {
   };
 }
 
-module.exports = new categoryControllers();
+module.exports = new categoryControllers(); 
