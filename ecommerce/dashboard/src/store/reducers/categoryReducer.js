@@ -11,7 +11,6 @@ export const categoryAdd = createAsyncThunk(
       const { data } = await api.post("/category-add", formData, {
         withCredentials: true,
       });
-      console.log(data);
       return fulfillWithValue(data);
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -41,6 +40,7 @@ export const categoryReducer = createSlice({
       .addCase(categoryAdd.fulfilled, (state, { payload }) => {
         state.loader = false;
         state.successMessage = payload.message;
+        state.category = [...state.category, payload.category];
       })
       .addCase(categoryAdd.rejected, (state, { payload }) => {
         state.loader = false;
