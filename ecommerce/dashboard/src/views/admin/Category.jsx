@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Pagination from "../Pagination";
@@ -10,11 +10,14 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   categoryAdd,
   messageClear,
+  get_category,
 } from "../../store/reducers/categoryReducer";
+import { toast } from "react-hot-toast";
+import Search from "../components/Search";
 const Category = () => {
   const dispatch = useDispatch();
   const { loader, successMessage, errorMessage } = useSelector(
-    (state) => state.auth
+    (state) => state.category
   );
   const [currentPage, setCurrentPage] = useState(1);
   const [searchValue, setSearchValue] = useState("");
@@ -37,9 +40,33 @@ const Category = () => {
   };
   const add_category = (e) => {
     e.preventDefault();
-    console.log(state);
     dispatch(categoryAdd(state));
   };
+
+  useEffect(() => {
+    if (errorMessage) {
+      toast.error(errorMessage);
+      dispatch(messageClear());
+    }
+    if (successMessage) {
+      toast.success(successMessage);
+      dispatch(messageClear());
+      setState({
+        name: "",
+        image: "",
+      });
+      setImage("");
+    }
+  }, [errorMessage, successMessage]);
+  
+  useEffect(() => {
+    const obj = {
+      perPage: parseInt(perPage),
+      page: parseInt(currentPage),
+      searchValue,
+    };
+    dispatch(get_category(obj))
+  }, [searchValue, currentPage, perPage]);
 
   return (
     <div className="px-2 lg:px-7 pt-5">
@@ -55,21 +82,11 @@ const Category = () => {
       <div className="flex flex-wrap w-full">
         <div className="w-full lg:w-7/12">
           <div className="w-full p-4 bg-Blue rounded-md">
-            <div className="flex justify-between items-center mb-4">
-              <select
-                className="px-4 py-2 focus:border-indigo-500 outline-none bg-Blue border border-slate-700 rounded-md text-light"
-                onChange={(e) => setPerPage(parseInt(e.target.value))}
-              >
-                <option value="5">5</option>
-                <option value="5">15</option>
-                <option value="5">25</option>
-              </select>
-              <input
-                type="text"
-                placeholder="search"
-                className="px-4 py-2 focus:border-indigo-500 outline-none bg-Blue border border-slate-700 rounded-md text-light"
-              />
-            </div>
+            <Search
+              setPerPage={setPerPage}
+              setSearchValue={setSearchValue}
+              searchValue={searchValue}
+            />
             <div className="relative overflow-x-auto">
               <table className="w-full text-sm text-left text-light">
                 <thead className=" uppercase border-b border-slate-700">

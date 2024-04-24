@@ -45,7 +45,38 @@ class categoryController {
     });
   };
 
-  get_category = async (req, res) => {};
+  get_category = async (req, res) => {
+    const { page, searchValue, perPage } = req.query;
+    const skipPage = parseInt(perPage) * (parseInt(page) - 1);
+    try {
+      if (searchValue) {
+        const category = await categoryModel
+          .find({
+            $text: { $search: searchValue },
+          })
+          .skip(skipPage)
+          .limit(perPage)
+          .sort({ createdAt: -1 });
+        const totalCategory = await categoryModel
+          .find({
+            $text: { $search: searchValue },
+          })
+          .countDocuments();
+        responseReturn(res, 200, { totalCategory, category });
+      } else {
+        const category = await categoryModel
+          .find({})
+          .skip(skipPage)
+          .limit(perPage)
+          .sort({ createdAt: -1 });
+
+        const totalCategory = await categoryModel.find({}).countDocuments();
+        responseReturn(res, 200, { totalCategory, category });
+      }
+    } catch (error) {
+      responseReturn(res, 500, { error: "Internal Server Error" });
+    }
+  };
 }
 
 module.exports = new categoryController();
