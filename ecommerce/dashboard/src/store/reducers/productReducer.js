@@ -1,14 +1,14 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import api from "../../api/api";
 
-export const categoryAdd = createAsyncThunk(
-  "category/categoryAdd",
+export const add_product = createAsyncThunk(
+  "products/add_product",
   async (info, { rejectWithValue, fulfillWithValue }) => {
     try {
       const formData = new FormData();
       formData.append("name", info.name);
       formData.append("image", info.image);
-      const { data } = await api.post("/category-add", formData, {
+      const { data } = await api.post("/products-add", formData, {
         withCredentials: true,
       });
       return fulfillWithValue(data);
@@ -18,15 +18,15 @@ export const categoryAdd = createAsyncThunk(
   }
 );
 
-export const get_category = createAsyncThunk(
-  "category/get_category",
+export const get_product = createAsyncThunk(
+  "products/get_product",
   async (
     { perPage, page, searchValue },
     { rejectWithValue, fulfillWithValue }
   ) => {
     try {
       const { data } = await api.get(
-        `/category-get?page=${page}&&searchValue=${searchValue}&&perPage=${perPage}`,
+        `/products-get?page=${page}&&searchValue=${searchValue}&&perPage=${perPage}`,
         {
           withCredentials: true,
         }
@@ -38,14 +38,14 @@ export const get_category = createAsyncThunk(
   }
 );
 
-export const categoryReducer = createSlice({
-  name: "category",
+export const productReducer = createSlice({
+  name: "products",
   initialState: {
     successMessage: "",
     errorMessage: "",
     loader: false,
-    categories: [],
-    totalCategory: 0,
+    products: [],
+    totalProducts: 0,
   },
   reducers: {
     messageClear: (state) => {
@@ -55,23 +55,23 @@ export const categoryReducer = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(categoryAdd.pending, (state) => {
+      .addCase(add_product.pending, (state) => {
         state.loader = true;
       })
-      .addCase(categoryAdd.fulfilled, (state, { payload }) => {
+      .addCase(add_product.fulfilled, (state, { payload }) => {
         state.loader = false;
         state.successMessage = payload.message;
-        state.categories = [...state.categories, payload.category];
+        state.products = [...state.products, payload.products];
       })
-      .addCase(categoryAdd.rejected, (state, { payload }) => {
+      .addCase(add_product.rejected, (state, { payload }) => {
         state.loader = false;
         state.errorMessage = payload.error;
       })
-      .addCase(get_category.fulfilled, (state, { payload }) => {
-        state.totalCategory = payload.totalCategory;
-        state.categories = payload.categories;
+      .addCase(get_product.fulfilled, (state, { payload }) => {
+        state.totalProducts = payload.totalProducts;
+        state.products = payload.products;
       });
   },
 });
-export const { messageClear } = categoryReducer.actions;
-export default categoryReducer.reducer;
+export const { messageClear } = productReducer.actions;
+export default productReducer.reducer;

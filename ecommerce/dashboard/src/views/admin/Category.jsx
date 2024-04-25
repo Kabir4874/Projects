@@ -16,7 +16,7 @@ import { toast } from "react-hot-toast";
 import Search from "../components/Search";
 const Category = () => {
   const dispatch = useDispatch();
-  const { loader, successMessage, errorMessage } = useSelector(
+  const { loader, successMessage, errorMessage, categories } = useSelector(
     (state) => state.category
   );
   const [currentPage, setCurrentPage] = useState(1);
@@ -58,14 +58,14 @@ const Category = () => {
       setImage("");
     }
   }, [errorMessage, successMessage]);
-  
+
   useEffect(() => {
     const obj = {
       perPage: parseInt(perPage),
       page: parseInt(currentPage),
       searchValue,
     };
-    dispatch(get_category(obj))
+    dispatch(get_category(obj));
   }, [searchValue, currentPage, perPage]);
 
   return (
@@ -106,18 +106,20 @@ const Category = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {[1, 2, 3, 4, 5].map((item, index) => (
+                  {categories.map((item, index) => (
                     <tr key={index}>
-                      <td className="py-3 px-4  whitespace-nowrap">{item}</td>
+                      <td className="py-3 px-4  whitespace-nowrap">
+                        {index + 1}
+                      </td>
                       <td className="py-3 px-4  whitespace-nowrap">
                         <img
-                          src={`http://localhost:3000/images/category/${item}.jpg`}
+                          src={item.image}
                           alt="category"
                           className="w-[45px] h-[45px]"
                         />
                       </td>
                       <td className="py-3 px-4  whitespace-nowrap">
-                        <span>Sports</span>
+                        <span>{item.name}</span>
                       </td>
                       <td className="py-3 px-4  whitespace-nowrap">
                         <div className="flex justify-start items-center gap-4">

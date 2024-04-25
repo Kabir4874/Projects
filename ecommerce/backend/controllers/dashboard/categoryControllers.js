@@ -24,6 +24,7 @@ class categoryController {
           const result = await cloudinary.uploader.upload(image[0].filepath, {
             folder: "category",
             resource_type: "auto",
+            quality: 30,
           });
           if (result) {
             const category = await categoryModel.create({
@@ -50,7 +51,7 @@ class categoryController {
     const skipPage = parseInt(perPage) * (parseInt(page) - 1);
     try {
       if (searchValue && page && perPage) {
-        const category = await categoryModel
+        const categories = await categoryModel
           .find({
             $text: { $search: searchValue },
           })
@@ -62,25 +63,21 @@ class categoryController {
             $text: { $search: searchValue },
           })
           .countDocuments();
-        responseReturn(res, 200, { totalCategory, category });
-      } else if (searchValue==='' && page && perPage) {
-        const category = await categoryModel
+        responseReturn(res, 200, { totalCategory, categories });
+      } else if (searchValue === "" && page && perPage) {
+        const categories = await categoryModel
           .find({})
           .skip(skipPage)
           .limit(perPage)
           .sort({ createdAt: -1 });
 
         const totalCategory = await categoryModel.find({}).countDocuments();
-        responseReturn(res, 200, { totalCategory, category });
+        responseReturn(res, 200, { totalCategory, categories });
       } else {
-        const category = await categoryModel
-          .find({})
-          .skip(skipPage)
-          .limit(perPage)
-          .sort({ createdAt: -1 });
+        const categories = await categoryModel.find({}).sort({ createdAt: -1 });
 
         const totalCategory = await categoryModel.find({}).countDocuments();
-        responseReturn(res, 200, { totalCategory, category });
+        responseReturn(res, 200, { totalCategory, categories });
       }
     } catch (error) {
       responseReturn(res, 500, { error: "Internal Server Error" });

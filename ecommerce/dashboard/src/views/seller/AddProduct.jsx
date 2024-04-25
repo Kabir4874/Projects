@@ -1,31 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsImages } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
+import { useSelector, useDispatch } from "react-redux";
+import { get_category } from "../../store/reducers/categoryReducer";
+import { add_product } from "../../store/reducers/productReducer";
 
 const AddProduct = () => {
-  const categories = [
-    {
-      id: 1,
-      name: "Sports",
-    },
-    {
-      id: 2,
-      name: "T-Shirt",
-    },
-    {
-      id: 3,
-      name: "Jersey",
-    },
-    {
-      id: 4,
-      name: "Pant",
-    },
-    {
-      id: 5,
-      name: "Watch",
-    },
-  ];
+  const dispatch = useDispatch();
+  const { categories } = useSelector((state) => state.category);
+
+  useEffect(() => {
+    dispatch(get_category());
+  }, []);
 
   const [categoryShow, setCategoryShow] = useState(false);
   const [category, setCategory] = useState("");
@@ -91,6 +78,10 @@ const AddProduct = () => {
     setImages([...filterImages]);
     setImageShow([...filterImageUrl]);
   };
+
+  const add = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="px-2 lg:px-7 pt-5">
       <div className="w-full p-4 bg-Blue rounded-md">
@@ -106,7 +97,7 @@ const AddProduct = () => {
           </div>
         </div>
         <div>
-          <form action="">
+          <form action="" onSubmit={add}>
             <div className="flex flex-col mb-3 md:flex-row gap-4 w-full text-light">
               <div className="flex flex-col w-full gap-1">
                 <label htmlFor="name">Product Name</label>
