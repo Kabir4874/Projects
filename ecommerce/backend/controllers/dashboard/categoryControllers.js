@@ -40,7 +40,7 @@ class categoryController {
             responseReturn(res, 404, { error: "Image Upload Failed" });
           }
         } catch (error) {
-          responseReturn(res, 500, { error: "Internal Server Error" });
+          responseReturn(res, 500, { error: "Internal Server Error While Adding Category" });
         }
       }
     });

@@ -98,8 +98,11 @@ const AddProduct = () => {
     formData.append("price", state.price);
     formData.append("stock", state.stock);
     formData.append("discount", state.discount);
+    formData.append("shopName", "Kabir Fashion");
     formData.append("brand", state.brand);
-    formData.append("images", images);
+    for (let i = 0; i < images.length; i++) {
+      formData.append("images", images[i]);
+    }
     dispatch(add_product(formData));
   };
   return (
