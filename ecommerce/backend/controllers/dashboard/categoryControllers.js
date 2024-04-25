@@ -49,7 +49,7 @@ class categoryController {
     const { page, searchValue, perPage } = req.query;
     const skipPage = parseInt(perPage) * (parseInt(page) - 1);
     try {
-      if (searchValue) {
+      if (searchValue && page && perPage) {
         const category = await categoryModel
           .find({
             $text: { $search: searchValue },
@@ -62,6 +62,15 @@ class categoryController {
             $text: { $search: searchValue },
           })
           .countDocuments();
+        responseReturn(res, 200, { totalCategory, category });
+      } else if (searchValue==='' && page && perPage) {
+        const category = await categoryModel
+          .find({})
+          .skip(skipPage)
+          .limit(perPage)
+          .sort({ createdAt: -1 });
+
+        const totalCategory = await categoryModel.find({}).countDocuments();
         responseReturn(res, 200, { totalCategory, category });
       } else {
         const category = await categoryModel
