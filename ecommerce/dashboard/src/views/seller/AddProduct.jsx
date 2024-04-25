@@ -11,13 +11,20 @@ const AddProduct = () => {
   const { categories } = useSelector((state) => state.category);
 
   useEffect(() => {
-    dispatch(get_category());
+    dispatch(
+      get_category({
+        searchValue: "",
+        perPage: "",
+        page: "",
+      })
+    );
   }, []);
 
   const [categoryShow, setCategoryShow] = useState(false);
   const [category, setCategory] = useState("");
   const [allCategory, setAllCategory] = useState([]);
   const [searchValue, setSearchValue] = useState("");
+
   const categorySearch = (event) => {
     const value = event.target.value;
     setSearchValue(value);
@@ -79,8 +86,21 @@ const AddProduct = () => {
     setImageShow([...filterImageUrl]);
   };
 
+  useEffect(() => {
+    setAllCategory(categories);
+  }, [categories]);
+
   const add = (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    formData.append("name", state.name);
+    formData.append("description", state.description);
+    formData.append("price", state.price);
+    formData.append("stock", state.stock);
+    formData.append("discount", state.discount);
+    formData.append("brand", state.brand);
+    formData.append("images", images);
+    dispatch(add_product(formData));
   };
   return (
     <div className="px-2 lg:px-7 pt-5">

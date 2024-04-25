@@ -68,6 +68,7 @@ const Category = () => {
     dispatch(get_category(obj));
   }, [searchValue, currentPage, perPage]);
 
+
   return (
     <div className="px-2 lg:px-7 pt-5">
       <div className="flex lg:hidden justify-between items-center mb-5 p-4 bg-Blue rounded-md">
