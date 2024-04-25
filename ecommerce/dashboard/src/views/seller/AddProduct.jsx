@@ -54,6 +54,7 @@ const AddProduct = () => {
   const [state, setState] = useState({
     name: "",
     description: "",
+    category: "",
     discount: "",
     price: "",
     brand: "",
@@ -89,8 +90,8 @@ const AddProduct = () => {
   useEffect(() => {
     setAllCategory(categories);
   }, [categories]);
-
   const add = (e) => {
+    console.log(state);
     e.preventDefault();
     const formData = new FormData();
     formData.append("name", state.name);
@@ -99,6 +100,7 @@ const AddProduct = () => {
     formData.append("stock", state.stock);
     formData.append("discount", state.discount);
     formData.append("shopName", "Kabir Fashion");
+    formData.append("category", state.category);
     formData.append("brand", state.brand);
     for (let i = 0; i < images.length; i++) {
       formData.append("images", images[i]);
@@ -178,7 +180,7 @@ const AddProduct = () => {
                   <div className="flex justify-start items-start flex-col h-[200px] overflow-y-scroll">
                     {allCategory.map((item, index) => (
                       <span
-                        key={item.id}
+                        key={index}
                         onClick={() => {
                           setCategoryShow(false);
                           setCategory(item.name);
@@ -199,7 +201,7 @@ const AddProduct = () => {
                 <label htmlFor="stock">Stock</label>
                 <input
                   type="number"
-                  placeholder="product brand"
+                  placeholder="stock"
                   name="stock"
                   id="stock"
                   value={state.stock}
