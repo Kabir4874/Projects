@@ -57,6 +57,19 @@ class productController {
       }
     });
   };
+
+  product_get = async (req, res) => {
+    const { page, searchValue, perPage } = req.query;
+    const { id } = req;
+    const skipPage = parseInt(perPage) * (parseInt(page) - 1);
+    try {
+      
+    } catch (error) {
+      responseReturn(res, 500, {
+          error: error.message,
+        });
+    }
+  };
 }
 
 module.exports = new productController();

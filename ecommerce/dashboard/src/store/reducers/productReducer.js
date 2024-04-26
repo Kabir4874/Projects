@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import api from "../../api/api";
 
 export const add_product = createAsyncThunk(
-  "products/add_product",
+  "product/add_product",
   async (product, { rejectWithValue, fulfillWithValue }) => {
     try {
       const { data } = await api.post("/product-add", product, {
@@ -16,18 +16,19 @@ export const add_product = createAsyncThunk(
 );
 
 export const get_product = createAsyncThunk(
-  "products/get_product",
+  "product/get_product",
   async (
     { perPage, page, searchValue },
     { rejectWithValue, fulfillWithValue }
   ) => {
     try {
       const { data } = await api.get(
-        `/products-get?page=${page}&&searchValue=${searchValue}&&perPage=${perPage}`,
+        `/product-get?page=${page}&&searchValue=${searchValue}&&perPage=${perPage}`,
         {
           withCredentials: true,
         }
       );
+      console.log(data);
       return fulfillWithValue(data);
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -36,7 +37,7 @@ export const get_product = createAsyncThunk(
 );
 
 export const productReducer = createSlice({
-  name: "products",
+  name: "product",
   initialState: {
     successMessage: "",
     errorMessage: "",
