@@ -192,7 +192,7 @@ const AddProduct = () => {
                         }`}
                       >
                         {item.name}
-                      </span>
+                      </span> 
                     ))}
                   </div>
                 </div>

@@ -49,10 +49,10 @@ class productController {
           images: allImageUrl,
           brand: brand[0].trim(),
         });
+        responseReturn(res, 201, { message: "Product Added Successfully" });
       } catch (error) {
-        console.log(error);
         responseReturn(res, 500, {
-          error: "Internal Server Error While Adding Product",
+          error: error.message,
         });
       }
     });
