@@ -3,12 +3,20 @@ import { BsImages } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import { useSelector, useDispatch } from "react-redux";
-import { get_category } from "../../store/reducers/categoryReducer";
+import {
+  get_category,
+  messageClear,
+} from "../../store/reducers/categoryReducer";
 import { add_product } from "../../store/reducers/productReducer";
-
+import { PropagateLoader } from "react-spinners";
+import { overrideStyle } from "../../utils/utils";
+import { toast } from "react-hot-toast";
 const AddProduct = () => {
   const dispatch = useDispatch();
   const { categories } = useSelector((state) => state.category);
+  const { successMessage, errorMessage, loader } = useSelector(
+    (state) => state.product
+  );
 
   useEffect(() => {
     dispatch(
@@ -107,6 +115,29 @@ const AddProduct = () => {
     }
     dispatch(add_product(formData));
   };
+
+  useEffect(() => {
+    if (errorMessage) {
+      toast.error(errorMessage);
+      dispatch(messageClear());
+    }
+    if (successMessage) {
+      toast.success(successMessage);
+      dispatch(messageClear());
+      setState({
+        name: "",
+        description: "",
+        category: "",
+        discount: "",
+        price: "",
+        brand: "",
+        stock: "",
+      });
+      setImageShow([]);
+      setImages([]);
+      setCategory("");
+    }
+  }, [errorMessage, successMessage]);
   return (
     <div className="px-2 lg:px-7 pt-5">
       <div className="w-full p-4 bg-Blue rounded-md">
@@ -192,7 +223,7 @@ const AddProduct = () => {
                         }`}
                       >
                         {item.name}
-                      </span> 
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -290,8 +321,15 @@ const AddProduct = () => {
               />
             </div>
             <div>
-              <button className=" bg-blue-500 hover:shadow-blue-500/50 hover:shadow-lg text-white rounded-md px-7 py-2 my-2">
-                Add Product
+              <button
+                className=" bg-blue-500 w-[230px] hover:shadow-blue-500/20 hover:shadow-lg text-white rounded-md px-7 py-2 mb-3 transition-all duration-200"
+                disabled={loader ? true : false}
+              >
+                {loader ? (
+                  <PropagateLoader cssOverride={overrideStyle} color="#fff" />
+                ) : (
+                  "Add Product"
+                )}
               </button>
             </div>
           </form>
