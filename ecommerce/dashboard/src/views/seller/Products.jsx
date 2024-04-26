@@ -8,7 +8,7 @@ import { get_product } from "../../store/reducers/productReducer";
 
 const Products = () => {
   const dispatch = useDispatch();
-  const { products, totalProducts } = useSelector((state) => state.product);
+  const { products, totalProduct } = useSelector((state) => state.product);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchValue, setSearchValue] = useState("");
   const [perPage, setPerPage] = useState(5);
@@ -64,36 +64,33 @@ const Products = () => {
               </tr>
             </thead>
             <tbody>
-              {[1, 2, 3, 4, 5].map((item, index) => (
+              {products.map((item, index) => (
                 <tr key={index}>
-                  <td className="py-3 px-4  whitespace-nowrap">{item}</td>
+                  <td className="py-3 px-4  whitespace-nowrap">{index + 1}</td>
                   <td className="py-3 px-4  whitespace-nowrap">
                     <img
-                      src={`http://localhost:3000/images/category/${item}.jpg`}
+                      src={item.images[0]}
                       alt="category"
                       className="w-[45px] h-[45px]"
                     />
                   </td>
                   <td className="py-3 px-4  whitespace-nowrap">
-                    <span>
-                      Men's Premium soft and comfortable T-shirt - Fabric's
-                      Royal Blue
-                    </span>
+                    <span>{item?.name?.slice(0, 16)}...</span>
                   </td>
                   <td className="py-3 px-4  whitespace-nowrap">
-                    <span>Sports</span>
+                    <span>{item.category}</span>
                   </td>
                   <td className="py-3 px-4  whitespace-nowrap">
-                    <span>Easy</span>
+                    <span>{item.brand}</span>
                   </td>
                   <td className="py-3 px-4  whitespace-nowrap">
-                    <span>$23</span>
+                    <span>${item.price}</span>
                   </td>
                   <td className="py-3 px-4  whitespace-nowrap">
-                    <span>5%</span>
+                    <span>{item.discount}%</span>
                   </td>
                   <td className="py-3 px-4  whitespace-nowrap">
-                    <span>50</span>
+                    <span>{item.stock}</span>
                   </td>
                   <td className="py-3 px-4  whitespace-nowrap">
                     <div className="flex justify-start items-center gap-4">
@@ -117,15 +114,19 @@ const Products = () => {
           </table>
         </div>
         {/* pagination  */}
-        <div className="w-full flex justify-end mt-4 mb-2">
-          <Pagination
-            pageNumber={currentPage}
-            setPageNumber={setCurrentPage}
-            totalItem={50}
-            perPage={perPage}
-            showItem={3}
-          />
-        </div>
+        {totalProduct <= perPage ? (
+          ""
+        ) : (
+          <div className="w-full flex justify-end mt-4 mb-2">
+            <Pagination
+              pageNumber={currentPage}
+              setPageNumber={setCurrentPage}
+              totalItem={50}
+              perPage={perPage}
+              showItem={3}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

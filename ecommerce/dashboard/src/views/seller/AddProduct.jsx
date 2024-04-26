@@ -108,7 +108,7 @@ const AddProduct = () => {
     formData.append("stock", state.stock);
     formData.append("discount", state.discount);
     formData.append("shopName", "Kabir Fashion");
-    formData.append("category", state.category);
+    formData.append("category", state.stock);
     formData.append("brand", state.brand);
     for (let i = 0; i < images.length; i++) {
       formData.append("images", images[i]);
@@ -263,6 +263,7 @@ const AddProduct = () => {
                   id="discount"
                   value={state.discount}
                   onChange={inputHandler}
+                  min={0}
                   className="px-4 py-2 focus:border-indigo-500 outline-none bg-Blue border border-slate-700 rounded-md text-light"
                 />
               </div>

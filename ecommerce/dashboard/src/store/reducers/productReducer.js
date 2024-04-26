@@ -43,7 +43,7 @@ export const productReducer = createSlice({
     errorMessage: "",
     loader: false,
     products: [],
-    totalProducts: 0,
+    totalProduct: 0,
   },
   reducers: {
     messageClear: (state) => {
