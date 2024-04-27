@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { FaEdit, FaEye, FaTrash } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { get_product } from "../../store/reducers/productReducer";
-
 const Products = () => {
   const dispatch = useDispatch();
   const { products, totalProduct } = useSelector((state) => state.product);
@@ -131,5 +130,4 @@ const Products = () => {
     </div>
   );
 };
-
 export default Products;
