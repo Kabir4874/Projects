@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { BsImages } from "react-icons/bs";
 import { Link, useParams } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
-
+import { get_category } from "../../store/reducers/categoryReducer";
+import { useDispatch } from "react-redux";
 const EditProduct = () => {
+  const dispatch = useDispatch();
   const { productId } = useParams();
   console.log(productId);
   const categories = [
@@ -59,6 +61,17 @@ const EditProduct = () => {
       setImageShow([...imageShow, ...imageUrl]);
     }
   };
+
+  useEffect(() => {
+    dispatch(
+      get_category({
+        searchValue: "",
+        perPage: "",
+        page: "",
+      })
+    );
+  }, []);
+
   const [state, setState] = useState({
     name: "",
     description: "",
@@ -107,9 +120,7 @@ const EditProduct = () => {
     ]);
   }, []);
 
-  useEffect(()=>{
-    
-  },[])
+  useEffect(() => {}, []);
   return (
     <div className="px-2 lg:px-7 pt-5">
       <div className="w-full p-4 bg-Blue rounded-md">
