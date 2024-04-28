@@ -3,33 +3,11 @@ import { BsImages } from "react-icons/bs";
 import { Link, useParams } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import { get_category } from "../../store/reducers/categoryReducer";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 const EditProduct = () => {
   const dispatch = useDispatch();
   const { productId } = useParams();
-  console.log(productId);
-  const categories = [
-    {
-      id: 1,
-      name: "Sports",
-    },
-    {
-      id: 2,
-      name: "T-Shirt",
-    },
-    {
-      id: 3,
-      name: "Jersey",
-    },
-    {
-      id: 4,
-      name: "Pant",
-    },
-    {
-      id: 5,
-      name: "Watch",
-    },
-  ];
+  const { categories } = useSelector((state) => state.category);
 
   const [categoryShow, setCategoryShow] = useState(false);
   const [category, setCategory] = useState("");
