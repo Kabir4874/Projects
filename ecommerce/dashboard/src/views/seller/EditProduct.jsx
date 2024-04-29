@@ -197,7 +197,6 @@ const EditProduct = () => {
                   name="stock"
                   id="stock"
                   value={state.stock}
-                  
                   onChange={inputHandler}
                   className="px-4 py-2 focus:border-indigo-500 outline-none bg-Blue border border-slate-700 rounded-md text-light"
                 />
