@@ -10,6 +10,7 @@ const EditProduct = () => {
   const { productId } = useParams();
 
   const { categories } = useSelector((state) => state.category);
+  const { product } = useSelector((state) => state.product);
 
   const [categoryShow, setCategoryShow] = useState(false);
   const [category, setCategory] = useState("");
@@ -85,21 +86,22 @@ const EditProduct = () => {
 
   useEffect(() => {
     setState({
-      name: "Men's Premium soft and comfortable T-shirt - Fabric's Royal Blue",
-      description:
-        "Men's Premium soft and comfortable T-shirt - Fabric's Royal Blue",
-      discount: 10,
-      price: 455,
-      brand: "Easy",
-      stock: 50,
+      name: product.name,
+      description: product.description,
+      discount: product.discount,
+      price: product.price,
+      brand: product.brand,
+      stock: product.stock,
     });
-    setCategory("Sports");
-    setImageShow([
-      "http://localhost:3000/images/admin.jpg",
-      "http://localhost:3000/images/admin.jpg",
-      "http://localhost:3000/images/admin.jpg",
-    ]);
-  }, []);
+    setCategory(product.category);
+    setImageShow(product.images);
+  }, [product]);
+
+  useEffect(() => {
+    if (categories.length > 0) {
+      setAllCategory(categories);
+    }
+  }, [categories]);
 
   useEffect(() => {
     dispatch(get_product(productId));
@@ -175,22 +177,23 @@ const EditProduct = () => {
                   </div>
                   <div className="pt-14"></div>
                   <div className="flex justify-start items-start flex-col h-[200px] overflow-y-scroll">
-                    {allCategory.map((item, index) => (
-                      <span
-                        key={item.id}
-                        onClick={() => {
-                          setCategoryShow(false);
-                          setCategory(item.name);
-                          setSearchValue("");
-                          setAllCategory(categories);
-                        }}
-                        className={`px-4 py-2 hover:bg-indigo-500 hover:text-white w-full cursor-pointer ${
-                          category === item.name && "bg-indigo-500"
-                        }`}
-                      >
-                        {item.name}
-                      </span>
-                    ))}
+                    {allCategory.length > 0 &&
+                      allCategory.map((item, index) => (
+                        <span
+                          key={index}
+                          onClick={() => {
+                            setCategoryShow(false);
+                            setCategory(item.name);
+                            setSearchValue("");
+                            setAllCategory(categories);
+                          }}
+                          className={`px-4 py-2 hover:bg-indigo-500 hover:text-white w-full cursor-pointer ${
+                            category === item.name && "bg-indigo-500"
+                          }`}
+                        >
+                          {item.name}
+                        </span>
+                      ))}
                   </div>
                 </div>
               </div>
@@ -246,19 +249,21 @@ const EditProduct = () => {
               ></textarea>
             </div>
             <div className="grid lg:grid-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 sm:gap-4  gap-3 w-full text-light mb-4">
-              {imageShow.map((img, index) => (
-                <div key={index}>
-                  <label htmlFor={index}>
-                    <img src={img} alt="" />
-                  </label>
-                  <input
-                    onChange={(e) => changeImage(img, e.target.files)}
-                    type="file"
-                    id={index}
-                    className="hidden"
-                  />
-                </div>
-              ))}
+              {imageShow &&
+                imageShow.length > 0 &&
+                imageShow.map((img, index) => (
+                  <div key={index}>
+                    <label htmlFor={index} className="h-[180px]">
+                      <img src={img} alt="" className="h-full" />
+                    </label>
+                    <input
+                      onChange={(e) => changeImage(img, e.target.files)}
+                      type="file"
+                      id={index}
+                      className="hidden"
+                    />
+                  </div>
+                ))}
             </div>
             <div>
               <button className=" bg-blue-500 hover:shadow-blue-500/50 hover:shadow-lg text-white rounded-md px-7 py-2 my-2">

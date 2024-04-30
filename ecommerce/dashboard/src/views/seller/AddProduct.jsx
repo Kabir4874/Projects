@@ -11,6 +11,7 @@ import { add_product } from "../../store/reducers/productReducer";
 import { PropagateLoader } from "react-spinners";
 import { overrideStyle } from "../../utils/utils";
 import { toast } from "react-hot-toast";
+
 const AddProduct = () => {
   const dispatch = useDispatch();
   const { categories } = useSelector((state) => state.category);
@@ -94,12 +95,10 @@ const AddProduct = () => {
     setImages([...filterImages]);
     setImageShow([...filterImageUrl]);
   };
-
   useEffect(() => {
     setAllCategory(categories);
   }, [categories]);
   const add = (e) => {
-    console.log(state);
     e.preventDefault();
     const formData = new FormData();
     formData.append("name", state.name);
@@ -108,7 +107,7 @@ const AddProduct = () => {
     formData.append("stock", state.stock);
     formData.append("discount", state.discount);
     formData.append("shopName", "Kabir Fashion");
-    formData.append("category", state.stock);
+    formData.append("category", category);
     formData.append("brand", state.brand);
     for (let i = 0; i < images.length; i++) {
       formData.append("images", images[i]);

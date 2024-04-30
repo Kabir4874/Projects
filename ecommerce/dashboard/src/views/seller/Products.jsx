@@ -20,6 +20,7 @@ const Products = () => {
     };
     dispatch(get_products(obj));
   }, [searchValue, currentPage, perPage]);
+  console.log(products);
 
   return (
     <div className="px-2 lg:px-7 pt-5">
@@ -94,7 +95,7 @@ const Products = () => {
                   <td className="py-3 px-4  whitespace-nowrap">
                     <div className="flex justify-start items-center gap-4">
                       <Link
-                        to={`/seller/dashboard/edit-product/:${item._id}`}
+                        to={`/seller/dashboard/edit-product/${item._id}`}
                         className="p-[6px] bg-yellow-600 rounded-sm hover:shadow-lg hover:shadow-yellow-600/50 flex items-center justify-center"
                       >
                         <FaEdit />

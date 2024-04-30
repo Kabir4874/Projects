@@ -36,7 +36,7 @@ class productController {
           });
           allImageUrl = [...allImageUrl, result.url];
         }
-        const product = await productModel.create({
+        await productModel.create({
           sellerId: id,
           name: productName,
           slug,
@@ -58,7 +58,7 @@ class productController {
     });
   };
 
-  product_get = async (req, res) => {
+  products_get = async (req, res) => {
     const { page, searchValue, perPage } = req.query;
     const { id } = req;
     const skipPage = parseInt(perPage) * (parseInt(page) - 1);
@@ -91,6 +91,18 @@ class productController {
           .countDocuments();
         responseReturn(res, 200, { totalProduct, products });
       }
+    } catch (error) {
+      responseReturn(res, 500, {
+        error: error.message,
+      });
+    }
+  };
+
+  product_get = async (req, res) => {
+    const { productId } = req.params;
+    try {
+      const product = await productModel.findById(productId);
+      responseReturn(res, 200, { product });
     } catch (error) {
       responseReturn(res, 500, {
         error: error.message,

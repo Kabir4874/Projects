@@ -58,7 +58,7 @@ export const productReducer = createSlice({
     errorMessage: "",
     loader: false,
     products: [],
-    product:'',
+    product: "",
     totalProduct: 0,
   },
   reducers: {
@@ -84,6 +84,9 @@ export const productReducer = createSlice({
       .addCase(get_products.fulfilled, (state, { payload }) => {
         state.totalProducts = payload.totalProducts;
         state.products = payload.products;
+      })
+      .addCase(get_product.fulfilled, (state, { payload }) => {
+        state.product = payload.product;
       });
   },
 });
