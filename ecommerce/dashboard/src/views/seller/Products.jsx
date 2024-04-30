@@ -4,7 +4,7 @@ import Pagination from "../Pagination";
 import { Link } from "react-router-dom";
 import { FaEdit, FaEye, FaTrash } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
-import { get_product } from "../../store/reducers/productReducer";
+import { get_products } from "../../store/reducers/productReducer";
 const Products = () => {
   const dispatch = useDispatch();
   const { products, totalProduct } = useSelector((state) => state.product);
@@ -18,7 +18,7 @@ const Products = () => {
       page: parseInt(currentPage),
       searchValue,
     };
-    dispatch(get_product(obj));
+    dispatch(get_products(obj));
   }, [searchValue, currentPage, perPage]);
 
   return (
