@@ -3,16 +3,19 @@ import { BsImages } from "react-icons/bs";
 import { Link, useParams } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import { get_category } from "../../store/reducers/categoryReducer";
+import { get_product } from "../../store/reducers/productReducer";
 import { useDispatch, useSelector } from "react-redux";
 const EditProduct = () => {
   const dispatch = useDispatch();
   const { productId } = useParams();
+
   const { categories } = useSelector((state) => state.category);
 
   const [categoryShow, setCategoryShow] = useState(false);
   const [category, setCategory] = useState("");
   const [allCategory, setAllCategory] = useState([]);
   const [searchValue, setSearchValue] = useState("");
+
   const categorySearch = (event) => {
     const value = event.target.value;
     setSearchValue(value);
@@ -98,7 +101,9 @@ const EditProduct = () => {
     ]);
   }, []);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    dispatch(get_product(productId));
+  }, [productId]);
   return (
     <div className="px-2 lg:px-7 pt-5">
       <div className="w-full p-4 bg-Blue rounded-md">
