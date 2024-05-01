@@ -73,7 +73,6 @@ const Products = () => {
                       alt="category"
                       className="w-[45px] h-[45px]"
                     />
-                    {console.log(item.images)}
                   </td>
                   <td className="py-3 px-4  whitespace-nowrap">
                     <span>{item?.name?.slice(0, 16)}...</span>
