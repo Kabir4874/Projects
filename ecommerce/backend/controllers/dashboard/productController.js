@@ -109,5 +109,9 @@ class productController {
       });
     }
   };
+
+  product_update = async (req, res) => {
+    console.log(req.body);
+  };
 }
 module.exports = new productController();

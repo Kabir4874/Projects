@@ -3,14 +3,24 @@ import { BsImages } from "react-icons/bs";
 import { Link, useParams } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import { get_category } from "../../store/reducers/categoryReducer";
-import { get_product } from "../../store/reducers/productReducer";
+import {
+  get_product,
+  update_product,
+} from "../../store/reducers/productReducer";
 import { useDispatch, useSelector } from "react-redux";
+import { PropagateLoader } from "react-spinners";
+import { overrideStyle } from "../../utils/utils";
+import { toast } from "react-hot-toast";
+import { messageClear } from "../../store/reducers/productReducer";
+
 const EditProduct = () => {
   const dispatch = useDispatch();
   const { productId } = useParams();
 
   const { categories } = useSelector((state) => state.category);
-  const { product } = useSelector((state) => state.product);
+  const { product, loader, errorMessage, successMessage } = useSelector(
+    (state) => state.product
+  );
 
   const [categoryShow, setCategoryShow] = useState(false);
   const [category, setCategory] = useState("");
@@ -106,6 +116,34 @@ const EditProduct = () => {
   useEffect(() => {
     dispatch(get_product(productId));
   }, [productId]);
+
+  useEffect(() => {
+    if (errorMessage) {
+      toast.error(errorMessage);
+      dispatch(messageClear());
+    }
+    if (successMessage) {
+      toast.success(successMessage);
+      dispatch(messageClear());
+      setState({
+        name: "",
+        description: "",
+        category: "",
+        discount: "",
+        price: "",
+        brand: "",
+        stock: "",
+      });
+      setCategory("");
+    }
+  }, [errorMessage, successMessage]);
+
+  const updateHandler = (e) => {
+    e.preventDefault();
+    state.productId = productId;
+    dispatch(update_product(state));
+  };
+
   return (
     <div className="px-2 lg:px-7 pt-5">
       <div className="w-full p-4 bg-Blue rounded-md">
@@ -121,7 +159,7 @@ const EditProduct = () => {
           </div>
         </div>
         <div>
-          <form action="">
+          <form action="" onSubmit={updateHandler}>
             <div className="flex flex-col mb-3 md:flex-row gap-4 w-full text-light">
               <div className="flex flex-col w-full gap-1">
                 <label htmlFor="name">Product Name</label>
@@ -266,8 +304,15 @@ const EditProduct = () => {
                 ))}
             </div>
             <div>
-              <button className=" bg-blue-500 hover:shadow-blue-500/50 hover:shadow-lg text-white rounded-md px-7 py-2 my-2">
-                Update Product
+              <button
+                className=" bg-blue-500 w-[230px] hover:shadow-blue-500/20 hover:shadow-lg text-white rounded-md px-7 py-2 mb-3 transition-all duration-200"
+                disabled={loader ? true : false}
+              >
+                {loader ? (
+                  <PropagateLoader cssOverride={overrideStyle} color="#fff" />
+                ) : (
+                  "Update Product"
+                )}
               </button>
             </div>
           </form>
