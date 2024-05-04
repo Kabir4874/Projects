@@ -2,9 +2,20 @@ import logo from "../assets/logo.svg";
 import Hover from "../assets/Hover.svg";
 import MenuIcon from "../assets/Menu Icon.svg";
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 const Header = () => {
+  const [nav, setNav] = useState("");
+  window.addEventListener("scroll", () => {
+    if (scrollY > 120) {
+      setNav("bg-white px-4 pt-4 pb-4 rounded-md shadow-lg");
+    } else {
+      setNav("");
+    }
+  });
   return (
-    <nav className="w-[75rem] mx-auto flex items-center justify-between mt-[3.11rem] pb-[2.81rem] border-b border-borderColor">
+    <nav
+      className={`w-[75rem] mx-auto flex items-center justify-between mt-[3.11rem] pb-[2.81rem] border-b border-borderColor sticky top-0 z-50 ${nav}`}
+    >
       <Link to={"/"}>
         <img src={logo} alt="" />
       </Link>

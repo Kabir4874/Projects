@@ -1,4 +1,3 @@
-import React from "react";
 import Photo1 from "../../assets/Photo1.png";
 import Photo2 from "../../assets/Photo2.png";
 import Photo3 from "../../assets/Photo3.png";
@@ -9,7 +8,6 @@ import upperPattern from "../../assets/upperpattern.svg";
 import downPattern from "../../assets/downpattern.svg";
 
 const Carousel = () => {
-  //   const images = [Photo1, Photo2, Photo3, Photo4, Photo5, Photo6];
   return (
     <div className="w-full relative mt-[0.38rem] overflow-y-hidden">
       <div className=" absolute -top-1">
