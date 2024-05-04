@@ -4,10 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        dark: "#030211",
-        grey: "#7C7C7C",
-        grey_light: "#C1C1C1",
-        navColor:'#08364A',
+        jaguar: "#030211",
+        boulder: "#7C7C7C",
+        silver: "#C1C1C1",
+        tarawera:'#08364A',
+        mercury:'#E9E9E9',
       },
     },
     fontFamily: {
