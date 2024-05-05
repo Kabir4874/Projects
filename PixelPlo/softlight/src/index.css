@@ -1,5 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&family=Syne:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&family=Syne:wght@400..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.hr-bg {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0.45%,
+    #e6e6e6 49.56%,
+    rgba(230, 230, 230, 0) 99.49%
+  );
+}
+.highlight-text {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 24.11%,
+    #fff 48.59%,
+    rgba(255, 255, 255, 0) 72.82%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.grid-bg{
+    background: url('./assets/grid.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
