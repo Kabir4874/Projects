@@ -5,6 +5,7 @@ import Partner from "../components/Home/Partner";
 import Projects from "../components/Home/Projects";
 import Revenue from "../components/Home/Revenue";
 import ScrollDown from "../components/Home/ScrollDown";
+import Testimonial from "../components/Home/Testimonial";
 import WhatWeDo from "../components/Home/WhatWeDo";
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
         <HighlightText />
         <Projects />
       </div>
+      <Testimonial />
     </div>
   );
 };
