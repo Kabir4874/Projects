@@ -64,10 +64,10 @@ const Footer = () => {
               </button>
             </div>
             <div className="flex items-center gap-[1.38rem]">
-              <img src={insta} alt="" />
-              <img src={fb} alt="" />
-              <img src={twitter} alt="" />
-              <img src={linkedin} alt="" />
+              <img src={insta} alt="" className=" cursor-pointer" />
+              <img src={fb} alt="" className=" cursor-pointer" />
+              <img src={twitter} alt="" className=" cursor-pointer" />
+              <img src={linkedin} alt="" className=" cursor-pointer" />
             </div>
           </div>
         </div>

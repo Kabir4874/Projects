@@ -25,7 +25,7 @@ const Home = () => {
         <Projects />
       </div>
       <Testimonial />
-      <FeedbackCount />
+      <FeedbackCount border={true}/>
       <Blogs />
       <CTA />
     </div>

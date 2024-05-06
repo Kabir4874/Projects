@@ -1,6 +1,10 @@
-const FeedbackCount = () => {
+const FeedbackCount = ({ border }) => {
   return (
-    <div className="w-[75rem] mx-auto mt-[3.4rem] pb-[8.38rem] border-b border-b-alto px-[3.45rem]">
+    <div
+      className={`w-[75rem] mx-auto mt-[3.4rem] pb-[8.38rem] ${
+        border ? "border-b border-b-alto" : ""
+      } px-[3.45rem]`}
+    >
       <div className="flex items-center justify-between">
         <div className=" text-center">
           <div className="flex items-center justify-center gap-[0.15rem]">
