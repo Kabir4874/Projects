@@ -1,4 +1,5 @@
 import Blogs from "../components/Home/Blogs";
+import CTA from "../components/Home/Team";
 import Carousel from "../components/Home/Carousel";
 import FeedbackCount from "../components/Home/FeedbackCount";
 import HeroSection from "../components/Home/HeroSection";
@@ -26,6 +27,7 @@ const Home = () => {
       <Testimonial />
       <FeedbackCount />
       <Blogs />
+      <CTA />
     </div>
   );
 };

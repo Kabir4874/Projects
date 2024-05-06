@@ -35,3 +35,26 @@
     color: transparent;
   }
 }
+.team-bg {
+  background: url("./assets/StarPattern.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.team-text {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 4.69%,
+    #f4f4f4 49.74%,
+    rgba(255, 255, 255, 0.08) 94.48%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer-bg{
+  background: url('./assets/FooterPattern.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
