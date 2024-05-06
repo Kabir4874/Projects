@@ -6,7 +6,7 @@ import BuildWebsitePhoto from "../../assets/BuildWebsitePhoto.png";
 import seeall from "../../assets/seeall.svg";
 const Projects = () => {
   return (
-    <div className="w-[75rem] mx-auto">
+    <div className="w-[62.2661rem] mx-auto">
       <h2 className=" text-white text-center font-syne text-[2.5rem] font-bold w-[53.5625rem] mx-auto mb-[6.25rem]">
         We Work to Craft Solid Products <br /> &{" "}
         <span className=" text-jaguar bg-white px-2">Project</span> For You

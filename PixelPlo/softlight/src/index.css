@@ -27,3 +27,11 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #c1c1c1;
+    color: transparent;
+  }
+}

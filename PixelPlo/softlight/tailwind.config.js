@@ -7,8 +7,10 @@ export default {
         jaguar: "#030211",
         boulder: "#7C7C7C",
         silver: "#C1C1C1",
-        tarawera:'#08364A',
-        mercury:'#E9E9E9',
+        tarawera: "#08364A",
+        mercury: "#E9E9E9",
+        alto: "#CECECE",
+        codGray: "#0D0D0D",
       },
     },
     fontFamily: {

@@ -1,4 +1,6 @@
+import Blogs from "../components/Home/Blogs";
 import Carousel from "../components/Home/Carousel";
+import FeedbackCount from "../components/Home/FeedbackCount";
 import HeroSection from "../components/Home/HeroSection";
 import HighlightText from "../components/Home/HighlightText";
 import Partner from "../components/Home/Partner";
@@ -22,6 +24,8 @@ const Home = () => {
         <Projects />
       </div>
       <Testimonial />
+      <FeedbackCount />
+      <Blogs />
     </div>
   );
 };

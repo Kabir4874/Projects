@@ -12,7 +12,7 @@ const Testimonial = () => {
     setToggleState(index);
   };
   return (
-    <div className="w-[75rem] mx-auto">
+    <div className="w-[58.9375rem] mx-auto mt-[3.26rem]">
       <div className=" w-full relative">
         <img src={Stroke} className="w-full" />
         <div className=" absolute top-[50%] w-[50.875rem] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col items-center gap-[1.62rem]">
