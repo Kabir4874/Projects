@@ -26,7 +26,7 @@ const Testimonial = () => {
       </div>
       <div className="flex justify-center items-start gap-[45px] mt-5">
         <div
-          className="flex flex-col items-center justify-center"
+          className="flex flex-col items-center justify-center cursor-pointer"
           onClick={() => (toggleState === 1 ? toggleTab(2) : toggleTab(1))}
         >
           <img
@@ -51,7 +51,7 @@ const Testimonial = () => {
           </div>
         </div>
         <div
-          className="flex flex-col items-center justify-center"
+          className="flex flex-col items-center justify-center cursor-pointer"
           onClick={() => (toggleState === 3 ? toggleTab(2) : toggleTab(3))}
         >
           <img

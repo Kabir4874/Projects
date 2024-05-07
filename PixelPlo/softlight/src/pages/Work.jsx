@@ -1,8 +1,13 @@
-import React from 'react'
+
+import HeroSection from '../components/work/HeroSection'
+import OurWork from '../components/work/OurWork'
 
 const Work = () => {
   return (
-    <div>Work</div>
+    <div className="w-full overflow-x-hidden">
+      <HeroSection/>
+      <OurWork/>
+    </div>
   )
 }
 

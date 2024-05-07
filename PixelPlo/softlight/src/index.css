@@ -58,3 +58,24 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.project-bg {
+  background: url("./assets/grid.svg");
+  background-repeat: space;
+  background-position: center;
+}
+.project-active {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) -5.45%,
+    #fff 49.93%,
+    rgba(255, 255, 255, 0) 107.79%
+  );
+}
+.single-project-bg {
+  background: url("./assets/singleProjectPattern.svg");
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position-x: center;
+  background-position-y: 25%;
+}
