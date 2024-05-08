@@ -7,7 +7,7 @@ const NewsLetter = () => {
           Never Miss a Single{" "}
           <span className=" bg-white text-jaguar px-2">News</span>
         </h2>
-        <p className=" text-white text-center font-nunito text-[1.375rem] mb-[3.12rem]">
+        <p className=" text-white text-center font-nunito text-[1.375rem] mb-[3.12rem] mt-5">
           Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod
           tempor incididunt ut labore et uis nostrud exercitation ullamco
           laboris nisi.

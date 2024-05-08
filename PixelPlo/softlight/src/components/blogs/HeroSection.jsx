@@ -26,7 +26,7 @@ const HeroSection = () => {
           </p>
           <Link
             to={"/blog/1"}
-            className="flex items-center gap-[0.38rem] text-jaguar font-nunito text-lg font-bold"
+            className="flex items-center gap-[0.38rem] text-jaguar font-nunito text-lg font-bold mt-[4.81rem]"
           >
             Read More <img src={rightArrow} alt="" className="mt-[2px]" />
           </Link>
