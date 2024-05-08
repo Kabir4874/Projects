@@ -1,9 +1,11 @@
-import React from 'react'
+import HeroSection from "../components/blogs/HeroSection";
 
 const News = () => {
   return (
-    <div>News</div>
-  )
-}
+    <div className="w-full overflow-x-hidden">
+      <HeroSection />
+    </div>
+  );
+};
 
-export default News
+export default News;

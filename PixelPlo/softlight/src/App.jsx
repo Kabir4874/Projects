@@ -7,6 +7,7 @@ const Work = lazy(() => import("./pages/Work"));
 const News = lazy(() => import("./pages/News"));
 const Contact = lazy(() => import("./pages/Contact"));
 const SingleProject = lazy(() => import("./pages/SingleProject"));
+const SingleBlog = lazy(() => import("./pages/SingleBlog"));
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/project/:id" element={<SingleProject />} />
+        <Route path="/blog/:id" element={<SingleBlog />} />
       </Route>
     </Routes>
   );

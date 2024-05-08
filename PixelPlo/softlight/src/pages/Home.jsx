@@ -1,15 +1,15 @@
-import Blogs from "../components/Home/Blogs";
-import CTA from "../components/Home/Team";
-import Carousel from "../components/Home/Carousel";
-import FeedbackCount from "../components/Home/FeedbackCount";
-import HeroSection from "../components/Home/HeroSection";
-import HighlightText from "../components/Home/HighlightText";
-import Partner from "../components/Home/Partner";
-import Projects from "../components/Home/Projects";
-import Revenue from "../components/Home/Revenue";
-import ScrollDown from "../components/Home/ScrollDown";
-import Testimonial from "../components/Home/Testimonial";
-import WhatWeDo from "../components/Home/WhatWeDo";
+import Blogs from "../components/home/Blogs";
+import CTA from "../components/home/Team";
+import Carousel from "../components/home/Carousel";
+import FeedbackCount from "../components/home/FeedbackCount";
+import HeroSection from "../components/home/HeroSection";
+import HighlightText from "../components/home/HighlightText";
+import Partner from "../components/home/Partner";
+import Projects from "../components/home/Projects";
+import Revenue from "../components/home/Revenue";
+import ScrollDown from "../components/home/ScrollDown";
+import Testimonial from "../components/home/Testimonial";
+import WhatWeDo from "../components/home/WhatWeDo";
 
 const Home = () => {
   return (
