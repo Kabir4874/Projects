@@ -70,35 +70,45 @@ const BlogDetails = () => {
         at lectus et enim aiondimentum volutpat feugiat gravida tortor, bibendum
         in. Vitae pharetra eu aliquet ut lorem.
       </p>
-      <div className="mt-[1.88rem] py-4 border-t border-pampas border-b">
+      <div className="mt-[1.88rem] space-x-[0.62rem] py-4 border-t border-pampas border-b">
         <button className="py-2 px-[1.125rem] rounded-[3.5rem] bg-jaguar text-white font-nunito text-sm">
           Design
         </button>
         <button className="py-2 px-[1.125rem] rounded-[3.5rem] bg-gallery text-boulder font-nunito text-sm">
           Technology
         </button>
-        <button className="py-2 px-[1.125rem] rounded-[3.5rem] bg-gallery text-boulder font-nunito text-sm">Website</button>
+        <button className="py-2 px-[1.125rem] rounded-[3.5rem] bg-gallery text-boulder font-nunito text-sm">
+          Website
+        </button>
       </div>
-      <div>
-        <div>
-          <img src={singleblog2Photo} alt="" />
+      <div className="flex items-center gap-[2.62rem] mt-[3.14rem] py-[2.12rem] px-[2.75rem] bg-jaguar text-white rounded-[0.5rem] border-2 border-jaguar">
+        <div className=" shrink-0">
+          <img src={singleblog2Photo} alt="" className="w-full rounded-full" />
         </div>
         <div>
-          <h6>Megan Olson</h6>
-          <p>Client of Agency</p>
-          <p>
+          <h6 className=" font-syne text-xl font-medium">Megan Olson</h6>
+          <p className="mt-[0.31rem] font-nunito text-sm">Client of Agency</p>
+          <p className="mt-[0.81rem] font-nunito text-lg italic">
             “ Lorem ipsum dolor consectetur adipiscing elitlacus laoreet donec
             adipiscing tristique risus. amet est placerat in egestas sed euismod
             nisi ut lorem. “
           </p>
-          <div className="flex items-center gap-10 mt-5">
-            <img src={insta} alt="" className="w-[2.113rem] cursor-pointer" />
-            <img src={fb} alt="" className="w-[2.113rem] cursor-pointer" />
-            <img src={twitter} alt="" className="w-[2.113rem] cursor-pointer" />
+          <div className="flex items-center gap-[1.38rem] mt-[0.81rem]">
+            <img
+              src={insta}
+              alt=""
+              className="w-[1.12rem] cursor-pointer svg"
+            />
+            <img src={fb} alt="" className="w-[1.12rem] cursor-pointer svg" />
+            <img
+              src={twitter}
+              alt=""
+              className="w-[1.12rem] cursor-pointer svg"
+            />
             <img
               src={linkedin}
               alt=""
-              className="w-[2.113rem] cursor-pointer"
+              className="w-[1.12rem] cursor-pointer svg"
             />
           </div>
         </div>
