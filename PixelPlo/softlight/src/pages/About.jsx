@@ -3,8 +3,8 @@ import Faq from "../components/about/Faq";
 import HeroSection from "../components/about/HeroSection";
 import NewsLetter from "../components/about/NewsLetter";
 import WhyPortLight from "../components/about/WhyPortLight";
-import FeedbackCount from "../components/Home/FeedbackCount";
-import Partner from "../components/Home/Partner";
+import FeedbackCount from "../components/home/FeedbackCount";
+import Partner from "../components/home/Partner";
 
 const About = () => {
   return (

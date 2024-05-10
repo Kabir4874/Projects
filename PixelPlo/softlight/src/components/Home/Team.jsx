@@ -3,6 +3,7 @@ import Team2Photo from "../../assets/Team2Photo.png";
 import Team3Photo from "../../assets/Team3Photo.png";
 import Team4Photo from "../../assets/Team4Photo.png";
 import Pattern from "../../assets/Pattern.svg";
+import { Link } from "react-router-dom";
 
 const Team = () => {
   return (
@@ -24,12 +25,14 @@ const Team = () => {
           Team
         </h2>
       </div>
-      <button className=" text-white font-nunito text-[0.875rem] font-bold flex items-center gap-[0.38rem] py-[0.5625rem] px-[1.5625rem] rounded-[2.5rem] border mx-auto mt-[163.27px]">
-        Meet Our Creative Professional
-        <span>
-          <img src={Pattern} alt="" />
-        </span>
-      </button>
+      <Link to={"/team"}>
+        <button className=" text-white font-nunito text-[0.875rem] font-bold flex items-center gap-[0.38rem] py-[0.5625rem] px-[1.5625rem] rounded-[2.5rem] border mx-auto mt-[163.27px]">
+          Meet Our Creative Professional
+          <span>
+            <img src={Pattern} alt="" />
+          </span>
+        </button>
+      </Link>
     </div>
   );
 };
