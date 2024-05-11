@@ -15,7 +15,7 @@ const Faq = () => {
   return (
     <div className="w-[62.25rem] mx-auto mt-[8.43rem]">
       <h2 className=" text-jaguar text-center font-syne text-[2.5rem] font-bold w-[53.5625rem] mx-auto mb-[4.38rem]">
-        Find the Answers on Frequently Asked
+        Find the Answers on Frequently Asked{" "}
         <span className="text-white bg-jaguar px-2">Questions</span>
       </h2>
       <div className=" flex flex-col items-start gap-[1.88rem] self-stretch">

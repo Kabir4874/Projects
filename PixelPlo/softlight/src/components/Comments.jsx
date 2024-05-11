@@ -11,7 +11,7 @@ const Comments = ({ heading, tik }) => {
               htmlFor="name"
               className=" text-jaguar font-syne text-xl font-medium leading-[150%]"
             >
-              Full Name*
+              Full Name *
             </label>
             <input
               type="text"
@@ -26,7 +26,7 @@ const Comments = ({ heading, tik }) => {
               htmlFor="email"
               className=" text-jaguar font-syne text-xl font-medium leading-[150%]"
             >
-              Your Email*
+              Your Email *
             </label>
             <input
               type="email"
@@ -42,7 +42,7 @@ const Comments = ({ heading, tik }) => {
             htmlFor="website"
             className=" text-jaguar font-syne text-xl font-medium leading-[150%]"
           >
-            Website*
+            Website *
           </label>
           <input
             type="text"
@@ -57,7 +57,7 @@ const Comments = ({ heading, tik }) => {
             htmlFor="message"
             className=" text-jaguar font-syne text-xl font-medium leading-[150%]"
           >
-            Message*
+            Message *
           </label>
           <textarea
             name="message"
