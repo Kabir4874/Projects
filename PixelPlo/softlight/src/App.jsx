@@ -9,6 +9,9 @@ const Contact = lazy(() => import("./pages/Contact"));
 const SingleProject = lazy(() => import("./pages/SingleProject"));
 const SingleBlog = lazy(() => import("./pages/SingleBlog"));
 const Team = lazy(() => import("./pages/Team"));
+const TeamSingle = lazy(() => import("./pages/TeamSingle"));
+const Pricing = lazy(() => import("./pages/Pricing"));
+const NoPage = lazy(() => import("./pages/NoPage"));
 
 const App = () => {
   return (
@@ -22,6 +25,9 @@ const App = () => {
         <Route path="/project/:id" element={<SingleProject />} />
         <Route path="/blog/:id" element={<SingleBlog />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/team/:id" element={<TeamSingle />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="*" element={<NoPage />} />
       </Route>
     </Routes>
   );

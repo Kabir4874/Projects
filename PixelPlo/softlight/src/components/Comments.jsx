@@ -1,8 +1,8 @@
-const Comments = () => {
+const Comments = ({ heading, tik }) => {
   return (
     <div className="w-[49.25rem] mx-auto mt-[4.47rem]">
       <h2 className=" text-jaguar font-syne text-[2.5rem] font-semibold leading-[128.182%]">
-        Leave a Comments
+        {heading}
       </h2>
       <form action="" className="mt-[2.88rem]">
         <div className="flex items-center justify-between gap-[1.12rem]">
@@ -66,7 +66,11 @@ const Comments = () => {
             className="w-full h-[15.625rem] rounded-[1.25rem] border border-alto3 py-[1.34rem] px-8 placeholder:text-boulder2 placeholder:font-nunito placeholder:text-lg placeholder:lowercase"
           ></textarea>
         </div>
-        <div className="mt-[1.12rem] space-x-[0.5rem] flex items-center">
+        <div
+          className={`mt-[1.12rem] space-x-[0.5rem] flex items-center ${
+            !tik && "hidden"
+          }`}
+        >
           <input
             type="checkbox"
             id="checkbox"

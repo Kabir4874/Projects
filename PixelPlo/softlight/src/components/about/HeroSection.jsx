@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HeroButton from "../HeroButton";
 
 const HeroSection = () => {
@@ -10,7 +11,9 @@ const HeroSection = () => {
         Whereby is the super simple way to connect over video. No downloads or
         long having into meeting links.
       </p>
-      <HeroButton text={"Join Our Team"} />
+      <Link to={"/pricing"}>
+        <HeroButton text={"Join Our Team"} />
+      </Link>
     </div>
   );
 };

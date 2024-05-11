@@ -15,7 +15,7 @@ const TeamDetails = () => {
   return (
     <div className="mt-[6.41rem] w-[62.2593rem] mx-auto">
       <div className="grid grid-cols-3 gap-x-[3.19rem] gap-y-[3.75rem] items-stretch">
-        <Link>
+        <Link to={"/team/1"}>
           <div className="relative group cursor-pointer">
             <img src={Team1Photo} alt="" className="w-full" />
             <div className="flex items-center justify-between py-4 px-[2.375rem] bg-jaguar absolute bottom-[5.4rem] left-0 right-0 transition-all duration-300 ease-in-out  invisible group-hover:visible opacity-0 group-hover:opacity-100">
@@ -32,7 +32,7 @@ const TeamDetails = () => {
             </p>
           </div>
         </Link>
-        <Link>
+        <Link to={"/team/1"}>
           <div className="relative group cursor-pointer">
             <img src={Team2Photo} alt="" className="w-full" />
             <div className="flex items-center justify-between py-4 px-[2.375rem] bg-jaguar absolute bottom-[5.4rem] left-0 right-0 transition-all duration-300 ease-in-out  invisible group-hover:visible opacity-0 group-hover:opacity-100">
@@ -49,7 +49,7 @@ const TeamDetails = () => {
             </p>
           </div>
         </Link>
-        <Link>
+        <Link to={"/team/1"}>
           <div className="relative group cursor-pointer">
             <img src={Team4Photo} alt="" className="w-full" />
             <div className="flex items-center justify-between py-4 px-[2.375rem] bg-jaguar absolute bottom-[5.4rem] left-0 right-0 transition-all duration-300 ease-in-out  invisible group-hover:visible opacity-0 group-hover:opacity-100">
@@ -66,7 +66,7 @@ const TeamDetails = () => {
             </p>
           </div>
         </Link>
-        <Link>
+        <Link to={"/team/1"}>
           <div className="relative group cursor-pointer">
             <img src={team5Photo} alt="" className="w-full" />
             <div className="flex items-center justify-between py-4 px-[2.375rem] bg-jaguar absolute bottom-[5.4rem] left-0 right-0 transition-all duration-300 ease-in-out  invisible group-hover:visible opacity-0 group-hover:opacity-100">
@@ -83,7 +83,7 @@ const TeamDetails = () => {
             </p>
           </div>
         </Link>
-        <Link>
+        <Link to={"/team/1"}>
           <div className="relative group cursor-pointer">
             <img src={Team3Photo} alt="" className="w-full" />
             <div className="flex items-center justify-between py-4 px-[2.375rem] bg-jaguar absolute bottom-[5.4rem] left-0 right-0 transition-all duration-300 ease-in-out  invisible group-hover:visible opacity-0 group-hover:opacity-100">
@@ -100,7 +100,7 @@ const TeamDetails = () => {
             </p>
           </div>
         </Link>
-        <Link>
+        <Link to={"/team/1"}>
           <div className="relative group cursor-pointer">
             <img src={team6} alt="" className="w-full" />
             <div className="flex items-center justify-between py-4 px-[2.375rem] bg-jaguar absolute bottom-[5.4rem] left-0 right-0 transition-all duration-300 ease-in-out  invisible group-hover:visible opacity-0 group-hover:opacity-100">

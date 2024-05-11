@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import icon from "../../assets/Icon.svg";
 import vector from "../../assets/Vector.svg";
 
@@ -26,9 +27,11 @@ const WhatWeDo = () => {
             be the point around which any strategy revolves.
           </p>
           <div>
-            <button className="flex items-center justify-center gap-[0.375rem] py-[0.5625rem] px-[1.125rem] border rounded-[2.5rem] border-tarawera text-tarawera font-nunito text-[0.875rem] font-bold capitalize">
-              see our process <img src={icon} alt="" />
-            </button>
+            <Link to={"/work"}>
+              <button className="flex items-center justify-center gap-[0.375rem] py-[0.5625rem] px-[1.125rem] border rounded-[2.5rem] border-tarawera text-tarawera font-nunito text-[0.875rem] font-bold capitalize">
+                see our process <img src={icon} alt="" />
+              </button>
+            </Link>
           </div>
         </div>
       </div>
