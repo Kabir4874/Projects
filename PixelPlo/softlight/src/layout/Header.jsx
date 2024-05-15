@@ -7,7 +7,7 @@ const Header = () => {
   const [nav, setNav] = useState("");
   window.addEventListener("scroll", () => {
     if (scrollY > 120) {
-      setNav("bg-white px-4 pt-4 pb-4 rounded-b-md shadow-lg");
+      setNav("bg-white px-4 pt-4 pb-4 rounded-b-md shadow");
     } else {
       setNav("");
     }

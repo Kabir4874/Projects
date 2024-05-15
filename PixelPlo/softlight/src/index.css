@@ -11,23 +11,11 @@
     rgba(230, 230, 230, 0) 99.49%
   );
 }
-.highlight-text {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 24.11%,
-    #fff 48.59%,
-    rgba(255, 255, 255, 0) 72.82%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .grid-bg {
   background: url("./assets/grid.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
-
 @layer utilities {
   .text-stroke {
     -webkit-text-stroke-width: 2px;
@@ -58,7 +46,6 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
 .project-bg {
   background: url("./assets/grid.svg");
   background-repeat: space;
@@ -88,13 +75,11 @@
   border-right-color: #474bff;
   animation: spinner-d3wgkg 1s infinite linear;
 }
-
 @keyframes spinner-d3wgkg {
   to {
     transform: rotate(1turn);
   }
 }
-
 .single-blog-quote {
   background: linear-gradient(
     270deg,
@@ -125,10 +110,40 @@
     rgba(230, 230, 230, 0) 99.49%
   );
 }
-.pricing-bg{
+.pricing-bg {
   border-radius: 14.78325rem;
-background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) -5.45%, #FFF 49.93%, rgba(255, 255, 255, 0.00) 107.79%);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) -5.45%,
+    #fff 49.93%,
+    rgba(255, 255, 255, 0) 107.79%
+  );
 }
-.faq-linear{
-background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) -5.45%, #FFF 49.93%, rgba(255, 255, 255, 0.00) 107.79%);
+.faq-linear {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) -5.45%,
+    #fff 49.93%,
+    rgba(255, 255, 255, 0) 107.79%
+  );
+}
+.demo {
+  background: linear-gradient(
+    90deg,
+    rgb(0, 0, 0, 1) 14.11%,
+    rgba(255, 255, 255, 0) 48.59%,
+    rgba(0, 0, 0, 1) 82.82%
+  );
+}
+.words {
+  position: relative;
+  animation: move-words 20s linear infinite;
+}
+@keyframes move-words {
+  0% {
+    left: 130%;
+  }
+  100% {
+    left: -130%;
+  }
 }
