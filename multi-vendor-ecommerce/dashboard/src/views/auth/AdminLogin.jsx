@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { AiOutlineGooglePlus } from "react-icons/ai";
-import { FiFacebook, FiTwitter } from "react-icons/fi";
-import { FaGithub } from "react-icons/fa";
-
+import { useDispatch, useSelector } from "react-redux";
+import { admin_login } from "../../store/reducers/authReducer";
 const AdminLogin = () => {
+  const dispatch = useDispatch();
   const [state, setState] = useState({
     email: "",
     password: "",
@@ -17,15 +15,19 @@ const AdminLogin = () => {
   };
   const submit = (e) => {
     e.preventDefault();
-    console.log(state);
+    dispatch(admin_login(state));
   };
   return (
     <div className="min-w-screen min-h-screen bg-mirage flex justify-center items-center">
       <div className="w-[350px] text-iron p-2">
         <div className=" bg-ebony_clay p-4 rounded-md">
-          <div>
-            <div>
-              <img src="http://localhost:3000/images/logo.png" alt="logo" />
+          <div className="h-[70px] flex justify-center items-center">
+            <div className="w-[180px] h-[50px]">
+              <img
+                className="w-full h-full"
+                src="http://localhost:3000/images/logo.png"
+                alt="Logo"
+              />
             </div>
           </div>
           <form onSubmit={submit}>
@@ -58,41 +60,6 @@ const AdminLogin = () => {
             <button className="bg-blue-500 w-full hover:shadow-blue-500/50 hover:shadow-lg text-white rounded-md px-7 py-2 mb-3">
               Login
             </button>
-            <div className="flex items-center mb-3 gap-3 justify-center">
-              <p>
-                Don't have an account?{" "}
-                <Link to={"/register"}>Register Here</Link>
-              </p>
-            </div>
-            <div className="w-full flex justify-center items-center mb-3 gap-3">
-              <div className="w-[45%] bg-slate-700 h-[1px]"></div>
-              <div>
-                <span className="pb-1">Or</span>
-              </div>
-              <div className="w-[45%] bg-slate-700 h-[1px]"></div>
-            </div>
-            <div className="flex justify-center items-center gap-3">
-              <div className="w-[35px] h-[35px] flex rounded-md bg-orange-700 shadow-lg hover:shadow-orange-700/50 justify-center cursor-pointer items-center overflow-hidden">
-                <span>
-                  <AiOutlineGooglePlus />
-                </span>
-              </div>
-              <div className="w-[35px] h-[35px] flex rounded-md bg-indigo-700 shadow-lg hover:shadow-indigo-700/50 justify-center cursor-pointer items-center overflow-hidden">
-                <span>
-                  <FiFacebook />
-                </span>
-              </div>
-              <div className="w-[35px] h-[35px] flex rounded-md bg-cyan-700 shadow-lg hover:shadow-cyan-700/50 justify-center cursor-pointer items-center overflow-hidden">
-                <span>
-                  <FiTwitter />
-                </span>
-              </div>
-              <div className="w-[35px] h-[35px] flex rounded-md bg-purple-700 shadow-lg hover:shadow-purple-700/50 justify-center cursor-pointer items-center overflow-hidden">
-                <span>
-                  <FaGithub />
-                </span>
-              </div>
-            </div>
           </form>
         </div>
       </div>
