@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { admin_login } from "../../store/reducers/authReducer";
+import { PropagateLoader } from "react-spinners";
+import { overrideStyle } from "../../utils/utils";
+import {toast} from 'react-hot-toast'
 const AdminLogin = () => {
   const dispatch = useDispatch();
+  const { loader } = useSelector((state) => state.auth);
   const [state, setState] = useState({
     email: "",
     password: "",
@@ -17,6 +21,11 @@ const AdminLogin = () => {
     e.preventDefault();
     dispatch(admin_login(state));
   };
+  useEffect(()=>{
+    if(errorMessage){
+      toast.error(e)
+    }
+  },[errorMessage])
   return (
     <div className="min-w-screen min-h-screen bg-mirage flex justify-center items-center">
       <div className="w-[350px] text-iron p-2">
@@ -57,8 +66,15 @@ const AdminLogin = () => {
                 value={state.password}
               />
             </div>
-            <button className="bg-blue-500 w-full hover:shadow-blue-500/50 hover:shadow-lg text-white rounded-md px-7 py-2 mb-3">
-              Login
+            <button
+              className=" bg-blue-500 w-full hover:shadow-blue-500/20 hover:shadow-lg text-white rounded-md px-7 py-2 mb-3 transition-all duration-200"
+              disabled={loader ? true : false}
+            >
+              {loader ? (
+                <PropagateLoader cssOverride={overrideStyle} color="#fff" />
+              ) : (
+                "Login"
+              )}
             </button>
           </form>
         </div>
