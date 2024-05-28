@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import api from "../../api/api";
+import { jwtDecode } from "jwt-decode";
 
 export const admin_login = createAsyncThunk(
   "auth/admin_login",
@@ -16,6 +17,21 @@ export const admin_login = createAsyncThunk(
   }
 );
 
+const returnRole = (token) => {
+  if (token) {
+    const decodeToken = jwtDecode(token);
+    const expireTime = new Date(decodeToken.exp * 1000);
+    if (new Date() > expireTime) {
+      localStorage.removeItem("accessToken");
+      return "";
+    } else {
+      return decodeToken.role;
+    }
+  } else {
+    return "";
+  }
+};
+
 export const authReducer = createSlice({
   name: "auth",
   initialState: {
@@ -23,6 +39,8 @@ export const authReducer = createSlice({
     errorMessage: "",
     loader: false,
     userInfo: "",
+    role: returnRole(localStorage.getItem("accessToken")),
+    token: localStorage.getItem("accessToken"),
   },
   reducers: {
     messageClear: (state) => {
@@ -39,7 +57,7 @@ export const authReducer = createSlice({
         state.loader = false;
         state.successMessage = payload.message;
         state.token = payload.token;
-        // state.role = returnRole(payload.token);
+        state.role = returnRole(payload.token);
       })
       .addCase(admin_login.rejected, (state, { payload }) => {
         state.loader = false;
