@@ -30,5 +30,10 @@ class authControllers {
       responseReturn(res, 500, { error: error.message });
     }
   };
+
+  getUser= async(req,res)=>{
+    
+  }
+
 }
 module.exports = new authControllers();
