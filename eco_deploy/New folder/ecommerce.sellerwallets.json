@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "66bca0a4281cd3dae7d0c1a7"
+  },
+  "sellerId": "66965924ec59fbac022e83da",
+  "amount": 95000,
+  "year": 2024,
+  "month": 8,
+  "createdAt": {
+    "$date": "2024-08-14T12:18:44.436Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-14T12:18:44.436Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66bca0a4281cd3dae7d0c1a9"
+  },
+  "sellerId": "669658b3ec59fbac022e83cd",
+  "amount": 95000,
+  "year": 2024,
+  "month": 8,
+  "createdAt": {
+    "$date": "2024-08-14T12:18:44.438Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-14T12:18:44.438Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66bdb8a5f056e0a4a1cf349b"
+  },
+  "sellerId": "66965924ec59fbac022e83da",
+  "amount": 95000,
+  "year": 2024,
+  "month": 8,
+  "createdAt": {
+    "$date": "2024-08-15T08:13:25.549Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-15T08:13:25.549Z"
+  },
+  "__v": 0
+}]

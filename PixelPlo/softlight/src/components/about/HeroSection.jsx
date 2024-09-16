@@ -11,9 +11,11 @@ const HeroSection = () => {
         Whereby is the super simple way to connect over video. No downloads or
         long having into meeting links.
       </p>
-      <Link to={"/pricing"}>
-        <HeroButton text={"Join Our Team"} />
-      </Link>
+      <div className=" w-fit mx-auto">
+        <Link to={"/team"}>
+          <HeroButton text={"See Our Team"} />
+        </Link>
+      </div>
     </div>
   );
 };

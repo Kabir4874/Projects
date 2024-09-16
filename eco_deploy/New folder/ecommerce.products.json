@@ -1,0 +1,148 @@
+[{
+  "_id": {
+    "$oid": "669659b9ec59fbac022e83fc"
+  },
+  "sellerId": {
+    "$oid": "669658b3ec59fbac022e83cd"
+  },
+  "name": "Apple Watch 8",
+  "slug": "Apple-Watch-8",
+  "category": "Smart Watch",
+  "brand": "Apple",
+  "price": 50000,
+  "stock": 50,
+  "discount": 5,
+  "description": "Best Watch",
+  "images": [
+    "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129400/products/qfp2x1ajvg4csivt4fwb.png",
+    "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129401/products/jf6eaejf7qnabn9idrcp.jpg",
+    "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129403/products/qhpl6dogfv99db5chm5m.jpg"
+  ],
+  "shopName": "Kabir Fashion",
+  "rating": 0,
+  "createdAt": {
+    "$date": "2024-07-16T11:30:01.498Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-16T11:30:01.498Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66965a18ec59fbac022e83fe"
+  },
+  "sellerId": {
+    "$oid": "669658b3ec59fbac022e83cd"
+  },
+  "name": "General ASGA24AET 2 Ton Air Conditioner",
+  "slug": "General-ASGA24AET-2-Ton-Air-Conditioner",
+  "category": "AC",
+  "brand": "General",
+  "price": 35000,
+  "stock": 5,
+  "discount": 2,
+  "description": "Best AC in range",
+  "images": [
+    "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129495/products/n4tfiq87xloknkor4rcl.jpg",
+    "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129497/products/sevxiwgwm2nbhxuxjznc.jpg"
+  ],
+  "shopName": "Kabir Fashion",
+  "rating": 0,
+  "createdAt": {
+    "$date": "2024-07-16T11:31:36.024Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-16T11:31:36.024Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "669667a8ec59fbac022e8400"
+  },
+  "sellerId": {
+    "$oid": "669658b3ec59fbac022e83cd"
+  },
+  "name": "iPhone 15 Pro Max",
+  "slug": "iPhone-15-Pro-Max",
+  "category": "Mobile",
+  "brand": "Apple",
+  "price": 150000,
+  "stock": 20,
+  "discount": 5,
+  "description": "Iphone",
+  "images": [
+    "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721132967/products/tkxoly76k55jusq1r4iv.jpg",
+    "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721132969/products/x8wzezggul2fdwtdildv.jpg"
+  ],
+  "shopName": "Kabir Fashion",
+  "rating": 3.2,
+  "createdAt": {
+    "$date": "2024-07-16T12:29:28.181Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-30T11:27:35.161Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a0e99bab2f89a46398db88"
+  },
+  "sellerId": {
+    "$oid": "66965924ec59fbac022e83da"
+  },
+  "name": "Lenovo Legion Pro",
+  "slug": "Lenovo-Legion-Pro",
+  "category": "Laptop",
+  "brand": "Lenovo",
+  "price": 100000,
+  "stock": 20,
+  "discount": 0,
+  "description": "best",
+  "images": [
+    "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721821586/products/bbopov1z7blarftycp0f.jpg",
+    "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721821592/products/rchgyitsy5cnjrkjiyfu.jpg"
+  ],
+  "shopName": "Kabir Fashion",
+  "rating": 0,
+  "createdAt": {
+    "$date": "2024-07-24T11:46:35.692Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T11:46:35.692Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66bf321af3b0a7f6295cc9da"
+  },
+  "sellerId": {
+    "$oid": "66965924ec59fbac022e83da"
+  },
+  "name": "HAYLOU RS4 Plus",
+  "slug": "HAYLOU-RS4-Plus",
+  "category": "Smart Watch",
+  "brand": "Haylou",
+  "price": 5000,
+  "stock": 30,
+  "discount": 5,
+  "description": "Smart Watch\r\nBIGGER THAN EVER\r\n1.78\" Retina AMOLED Display\r\n368*448 Pixel\r\nCraft with Metal\r\n105 Sports Mode\r\n100+ Online Watch Faces\r\nCustomized Watch Face\r\nSpO2 Heart rate Monitoring\r\nSleep, Monitoring\r\nTemperature Monitoring",
+  "images": [
+    "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1723806229/products/eiad55dcoxepkqecxkmj.jpg",
+    "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1723806231/products/z0nsxltrosh7hjalb8a4.jpg",
+    "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1723806232/products/h8a8yw0v5eydinpewh8v.jpg",
+    "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1723806234/products/filgmhgtkyfb7tjynujq.jpg"
+  ],
+  "shopName": "Kabir Fashion",
+  "rating": 0,
+  "createdAt": {
+    "$date": "2024-08-16T11:03:54.315Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-16T11:03:54.315Z"
+  },
+  "__v": 0
+}]

@@ -4,7 +4,6 @@ import Team3Photo from "../../assets/Team3Photo.png";
 import Team4Photo from "../../assets/Team4Photo.png";
 import team5Photo from "../../assets/team5Photo.png";
 import team6 from "../../assets/team6.png";
-import HeroButton from "../HeroButton";
 import insta from "../../assets/insta.svg";
 import fb from "../../assets/fb.svg";
 import twitter from "../../assets/twitter.svg";
@@ -117,9 +116,6 @@ const TeamDetails = () => {
             </p>
           </div>
         </Link>
-      </div>
-      <div className="mt-[3.74rem]">
-        <HeroButton text={"Join Our Team"} />
       </div>
     </div>
   );

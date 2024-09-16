@@ -1,0 +1,388 @@
+[{
+  "_id": {
+    "$oid": "66a20e4cf77fbb8ab4832f1e"
+  },
+  "customerId": {
+    "$oid": "66967135ec59fbac022e8409"
+  },
+  "products": [
+    {
+      "_id": "669659b9ec59fbac022e83fc",
+      "sellerId": "669658b3ec59fbac022e83cd",
+      "name": "Apple Watch 8",
+      "slug": "Apple-Watch-8",
+      "category": "Smart Watch",
+      "brand": "Apple",
+      "price": 50000,
+      "stock": 50,
+      "discount": 5,
+      "description": "Best Watch",
+      "images": [
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129400/products/qfp2x1ajvg4csivt4fwb.png",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129401/products/jf6eaejf7qnabn9idrcp.jpg",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129403/products/qhpl6dogfv99db5chm5m.jpg"
+      ],
+      "shopName": "Kabir Fashion",
+      "rating": 0,
+      "createdAt": "2024-07-16T11:30:01.498Z",
+      "updatedAt": "2024-07-16T11:30:01.498Z",
+      "__v": 0
+    },
+    {
+      "_id": "669667a8ec59fbac022e8400",
+      "sellerId": "669658b3ec59fbac022e83cd",
+      "name": "iPhone 15 Pro Max",
+      "slug": "iPhone-15-Pro-Max",
+      "category": "Mobile",
+      "brand": "Apple",
+      "price": 150000,
+      "stock": 20,
+      "discount": 5,
+      "description": "Iphone",
+      "images": [
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721132967/products/tkxoly76k55jusq1r4iv.jpg",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721132969/products/x8wzezggul2fdwtdildv.jpg"
+      ],
+      "shopName": "Kabir Fashion",
+      "rating": 0,
+      "createdAt": "2024-07-16T12:29:28.181Z",
+      "updatedAt": "2024-07-16T12:29:28.181Z",
+      "__v": 0
+    },
+    {
+      "_id": "66965a18ec59fbac022e83fe",
+      "sellerId": "669658b3ec59fbac022e83cd",
+      "name": "General ASGA24AET 2 Ton Air Conditioner",
+      "slug": "General-ASGA24AET-2-Ton-Air-Conditioner",
+      "category": "AC",
+      "brand": "General",
+      "price": 35000,
+      "stock": 5,
+      "discount": 2,
+      "description": "Best AC in range",
+      "images": [
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129495/products/n4tfiq87xloknkor4rcl.jpg",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129497/products/sevxiwgwm2nbhxuxjznc.jpg"
+      ],
+      "shopName": "Kabir Fashion",
+      "rating": 0,
+      "createdAt": "2024-07-16T11:31:36.024Z",
+      "updatedAt": "2024-07-16T11:31:36.024Z",
+      "__v": 0
+    }
+  ],
+  "price": 361585,
+  "payment_status": "unpaid",
+  "shippingInfo": {
+    "name": "Tanvir Joy",
+    "address": "Mirpur,Dhaka-1216",
+    "phone": "01886807343",
+    "post": "1216",
+    "province": "New South Wales",
+    "city": "Mumbai",
+    "area": "Mirpur"
+  },
+  "delivery_status": "pending",
+  "date": "July 25, 2024 2:35 PM",
+  "createdAt": {
+    "$date": "2024-07-25T08:35:24.996Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T08:35:24.996Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a236d67896054785ce7393"
+  },
+  "customerId": {
+    "$oid": "66967135ec59fbac022e8409"
+  },
+  "products": [
+    {
+      "_id": "669659b9ec59fbac022e83fc",
+      "sellerId": "669658b3ec59fbac022e83cd",
+      "name": "Apple Watch 8",
+      "slug": "Apple-Watch-8",
+      "category": "Smart Watch",
+      "brand": "Apple",
+      "price": 50000,
+      "stock": 50,
+      "discount": 5,
+      "description": "Best Watch",
+      "images": [
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129400/products/qfp2x1ajvg4csivt4fwb.png",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129401/products/jf6eaejf7qnabn9idrcp.jpg",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129403/products/qhpl6dogfv99db5chm5m.jpg"
+      ],
+      "shopName": "Kabir Fashion",
+      "rating": 0,
+      "createdAt": "2024-07-16T11:30:01.498Z",
+      "updatedAt": "2024-07-16T11:30:01.498Z",
+      "__v": 0
+    },
+    {
+      "_id": "669667a8ec59fbac022e8400",
+      "sellerId": "669658b3ec59fbac022e83cd",
+      "name": "iPhone 15 Pro Max",
+      "slug": "iPhone-15-Pro-Max",
+      "category": "Mobile",
+      "brand": "Apple",
+      "price": 150000,
+      "stock": 20,
+      "discount": 5,
+      "description": "Iphone",
+      "images": [
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721132967/products/tkxoly76k55jusq1r4iv.jpg",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721132969/products/x8wzezggul2fdwtdildv.jpg"
+      ],
+      "shopName": "Kabir Fashion",
+      "rating": 0,
+      "createdAt": "2024-07-16T12:29:28.181Z",
+      "updatedAt": "2024-07-16T12:29:28.181Z",
+      "__v": 0
+    },
+    {
+      "_id": "66965a18ec59fbac022e83fe",
+      "sellerId": "669658b3ec59fbac022e83cd",
+      "name": "General ASGA24AET 2 Ton Air Conditioner",
+      "slug": "General-ASGA24AET-2-Ton-Air-Conditioner",
+      "category": "AC",
+      "brand": "General",
+      "price": 35000,
+      "stock": 5,
+      "discount": 2,
+      "description": "Best AC in range",
+      "images": [
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129495/products/n4tfiq87xloknkor4rcl.jpg",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129497/products/sevxiwgwm2nbhxuxjznc.jpg"
+      ],
+      "shopName": "Kabir Fashion",
+      "rating": 0,
+      "createdAt": "2024-07-16T11:31:36.024Z",
+      "updatedAt": "2024-07-16T11:31:36.024Z",
+      "__v": 0
+    }
+  ],
+  "price": 361585,
+  "payment_status": "unpaid",
+  "shippingInfo": {
+    "name": "Tanvir Joy",
+    "address": "Mirpur,Dhaka-1216",
+    "phone": "01886807343",
+    "post": "1216",
+    "province": "New South Wales",
+    "city": "Mumbai",
+    "area": "Mirpur"
+  },
+  "delivery_status": "cancelled",
+  "date": "July 25, 2024 5:28 PM",
+  "createdAt": {
+    "$date": "2024-07-25T11:28:22.244Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T11:33:22.275Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a24425f804ee52822c1acc"
+  },
+  "customerId": {
+    "$oid": "66967135ec59fbac022e8409"
+  },
+  "products": [
+    {
+      "_id": "66a0e99bab2f89a46398db88",
+      "sellerId": "66965924ec59fbac022e83da",
+      "name": "Lenovo Legion Pro",
+      "slug": "Lenovo-Legion-Pro",
+      "category": "Laptop",
+      "brand": "Lenovo",
+      "price": 100000,
+      "stock": 20,
+      "discount": 0,
+      "description": "best",
+      "images": [
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721821586/products/bbopov1z7blarftycp0f.jpg",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721821592/products/rchgyitsy5cnjrkjiyfu.jpg"
+      ],
+      "shopName": "Kabir Fashion",
+      "rating": 0,
+      "createdAt": "2024-07-24T11:46:35.692Z",
+      "updatedAt": "2024-07-24T11:46:35.692Z",
+      "__v": 0
+    },
+    {
+      "_id": "669659b9ec59fbac022e83fc",
+      "sellerId": "669658b3ec59fbac022e83cd",
+      "name": "Apple Watch 8",
+      "slug": "Apple-Watch-8",
+      "category": "Smart Watch",
+      "brand": "Apple",
+      "price": 50000,
+      "stock": 50,
+      "discount": 5,
+      "description": "Best Watch",
+      "images": [
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129400/products/qfp2x1ajvg4csivt4fwb.png",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129401/products/jf6eaejf7qnabn9idrcp.jpg",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129403/products/qhpl6dogfv99db5chm5m.jpg"
+      ],
+      "shopName": "Kabir Fashion",
+      "rating": 0,
+      "createdAt": "2024-07-16T11:30:01.498Z",
+      "updatedAt": "2024-07-16T11:30:01.498Z",
+      "__v": 0
+    }
+  ],
+  "price": 147670,
+  "payment_status": "unpaid",
+  "shippingInfo": {
+    "name": "Tanvir Joy",
+    "address": "Mirpur,Dhaka-1216",
+    "phone": "01886807343",
+    "post": "1216",
+    "province": "New South Wales",
+    "city": "Mumbai",
+    "area": "Mirpur"
+  },
+  "delivery_status": "warehouse",
+  "date": "July 25, 2024 6:25 PM",
+  "createdAt": {
+    "$date": "2024-07-25T12:25:09.143Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-10T04:58:59.641Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66bb4050922c30467dac7501"
+  },
+  "customerId": {
+    "$oid": "66ab2054ce0e14939f8f3c90"
+  },
+  "products": [
+    {
+      "_id": "66a0e99bab2f89a46398db88",
+      "sellerId": "66965924ec59fbac022e83da",
+      "name": "Lenovo Legion Pro",
+      "slug": "Lenovo-Legion-Pro",
+      "category": "Laptop",
+      "brand": "Lenovo",
+      "price": 100000,
+      "stock": 20,
+      "discount": 0,
+      "description": "best",
+      "images": [
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721821586/products/bbopov1z7blarftycp0f.jpg",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721821592/products/rchgyitsy5cnjrkjiyfu.jpg"
+      ],
+      "shopName": "Kabir Fashion",
+      "rating": 0,
+      "createdAt": "2024-07-24T11:46:35.692Z",
+      "updatedAt": "2024-07-24T11:46:35.692Z",
+      "__v": 0,
+      "quantity": 1
+    },
+    {
+      "_id": "669659b9ec59fbac022e83fc",
+      "sellerId": "669658b3ec59fbac022e83cd",
+      "name": "Apple Watch 8",
+      "slug": "Apple-Watch-8",
+      "category": "Smart Watch",
+      "brand": "Apple",
+      "price": 50000,
+      "stock": 50,
+      "discount": 5,
+      "description": "Best Watch",
+      "images": [
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129400/products/qfp2x1ajvg4csivt4fwb.png",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129401/products/jf6eaejf7qnabn9idrcp.jpg",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129403/products/qhpl6dogfv99db5chm5m.jpg"
+      ],
+      "shopName": "Kabir Fashion",
+      "rating": 0,
+      "createdAt": "2024-07-16T11:30:01.498Z",
+      "updatedAt": "2024-07-16T11:30:01.498Z",
+      "__v": 0,
+      "quantity": 1
+    }
+  ],
+  "price": 147670,
+  "payment_status": "paid",
+  "shippingInfo": {
+    "name": "Kabir Ahmed Ridoy",
+    "address": "Mirpur,Dhaka-1216",
+    "phone": "01886807343",
+    "post": "1216",
+    "province": "New South Wales",
+    "city": "Mumbai",
+    "area": "Mirpur"
+  },
+  "delivery_status": "pending",
+  "date": "August 13, 2024 5:15 PM",
+  "createdAt": {
+    "$date": "2024-08-13T11:15:28.416Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-14T12:18:44.411Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66bdb889f056e0a4a1cf348f"
+  },
+  "customerId": {
+    "$oid": "66ab2054ce0e14939f8f3c90"
+  },
+  "products": [
+    {
+      "_id": "66a0e99bab2f89a46398db88",
+      "sellerId": "66965924ec59fbac022e83da",
+      "name": "Lenovo Legion Pro",
+      "slug": "Lenovo-Legion-Pro",
+      "category": "Laptop",
+      "brand": "Lenovo",
+      "price": 100000,
+      "stock": 20,
+      "discount": 0,
+      "description": "best",
+      "images": [
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721821586/products/bbopov1z7blarftycp0f.jpg",
+        "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721821592/products/rchgyitsy5cnjrkjiyfu.jpg"
+      ],
+      "shopName": "Kabir Fashion",
+      "rating": 0,
+      "createdAt": "2024-07-24T11:46:35.692Z",
+      "updatedAt": "2024-07-24T11:46:35.692Z",
+      "__v": 0,
+      "quantity": 1
+    }
+  ],
+  "price": 100085,
+  "payment_status": "paid",
+  "shippingInfo": {
+    "name": "Tanvir Joy",
+    "address": "Mirpur,Dhaka-1216",
+    "phone": "01886807343",
+    "post": "1216",
+    "province": "New South Wales",
+    "city": "Mumbai",
+    "area": "Mirpur"
+  },
+  "delivery_status": "pending",
+  "date": "August 15, 2024 2:12 PM",
+  "createdAt": {
+    "$date": "2024-08-15T08:12:57.553Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-15T08:13:25.529Z"
+  },
+  "__v": 0
+}]

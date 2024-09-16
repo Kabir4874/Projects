@@ -1,7 +1,7 @@
 import headerPhoto from "../../assets/Photo.png";
 import star from "../../assets/Star 1.svg";
-import right from "../../assets/Pattern.svg";
 import { Link } from "react-router-dom";
+import HeroButton from "../HeroButton";
 
 const HeroSection = () => {
   return (
@@ -20,9 +20,7 @@ const HeroSection = () => {
       </p>
       <div className=" w-fit mx-auto">
         <Link to={"/contact"}>
-          <button className=" capitalize py-[0.625rem] px-3 flex items-center justify-center gap-[0.625rem] rounded-[2.5rem] bg-tarawera text-white font-nunito text-[0.875rem] font-bold">
-            say hello <img src={right} alt="" />
-          </button>
+          <HeroButton text={"Say Hello"} />
         </Link>
       </div>
     </div>

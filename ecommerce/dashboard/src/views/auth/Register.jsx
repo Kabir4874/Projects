@@ -1,7 +1,50 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AiOutlineGooglePlus } from "react-icons/ai";
+import { FiFacebook } from "react-icons/fi";
+import { FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { useDispatch, useSelector } from "react-redux";
+import { PropagateLoader } from "react-spinners";
+import { overrideStyle } from "../../utils/utils";
+import {
+  messageClear,
+  seller_register,
+} from "../../store/reducers/authReducer";
+import toast from "react-hot-toast";
 
 const Register = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { loader, errorMessage, successMessage } = useSelector(
+    (state) => state.auth
+  );
+  const [state, setState] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  const inputHandle = (e) => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const submit = (e) => {
+    e.preventDefault();
+    dispatch(seller_register(state));
+  };
+  useEffect(() => {
+    if (successMessage) {
+      toast.success(successMessage);
+      dispatch(messageClear());
+      navigate("/");
+    }
+    if (errorMessage) {
+      toast.error(errorMessage);
+      dispatch(messageClear());
+    }
+  }, [errorMessage, successMessage]);
   return (
     <div className=" min-w-screen min-h-screen bg-mirage flex justify-center items-center">
       <div className="w-[350px] text-iron p-2">
@@ -10,7 +53,7 @@ const Register = () => {
           <p className="text-sm mb-3">
             Please register and start your business
           </p>
-          <form action="">
+          <form action="" onSubmit={submit}>
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="name">Name</label>
               <input
@@ -20,6 +63,8 @@ const Register = () => {
                 placeholder="name"
                 id="name"
                 required
+                onChange={inputHandle}
+                value={state.name}
               />
             </div>
 
@@ -32,6 +77,8 @@ const Register = () => {
                 placeholder="email"
                 id="email"
                 required
+                onChange={inputHandle}
+                value={state.email}
               />
             </div>
 
@@ -44,6 +91,8 @@ const Register = () => {
                 placeholder="password"
                 id="password"
                 required
+                onChange={inputHandle}
+                value={state.password}
               />
             </div>
 
@@ -59,16 +108,52 @@ const Register = () => {
                 I agree to privacy policy & terms
               </label>
             </div>
-            <button className=" bg-blue-500 w-full hover:shadow-blue-500/50 hover:shadow-lg text-white rounded-md px-7 py-2 mb-3 transition-all duration-200">
-              Sign Up
+            <button
+              disabled={loader ? true : false}
+              className=" bg-blue-500 w-full hover:shadow-blue-500/20 hover:shadow-lg text-white rounded-md px-7 py-2 mb-3 transition-all duration-200"
+            >
+              {loader ? (
+                <PropagateLoader color="#fff" cssOverride={overrideStyle} />
+              ) : (
+                "Register"
+              )}
             </button>
             <div className="flex items-center justify-center mb-3 gap-3">
               <p>
-                Already have an account? <Link to={"/login"}>Login Here</Link>
+                Already have an account?{" "}
+                <Link to={"/login"} className=" underline">
+                  Login Here
+                </Link>
               </p>
             </div>
-            <div>
-              
+            <div className="w-full flex justify-center items-center mb-3">
+              <div className="w-[45%] bg-slate-700 h-[1px]"></div>
+              <div className="w-[10%] flex justify-center items-center">
+                <span className="pb-1">Or</span>
+              </div>
+              <div className="w-[45%] bg-slate-700 h-[1px]"></div>
+            </div>
+            <div className="flex justify-center items-center gap-3">
+              <div className="w-[35px] h-[35px] flex items-center justify-center rounded-md bg-orange-700 shadow-lg hover:shadow-orange-700/50 cursor-pointer overflow-hidden">
+                <span>
+                  <AiOutlineGooglePlus />
+                </span>
+              </div>
+              <div className="w-[35px] h-[35px] flex items-center justify-center rounded-md bg-indigo-700 shadow-lg hover:shadow-indigo-700/50 cursor-pointer overflow-hidden">
+                <span>
+                  <FiFacebook />
+                </span>
+              </div>
+              <div className="w-[35px] h-[35px] flex items-center justify-center rounded-md bg-cyan-700 shadow-lg hover:shadow-cyan-700/50 cursor-pointer overflow-hidden">
+                <span>
+                  <FaXTwitter />
+                </span>
+              </div>
+              <div className="w-[35px] h-[35px] flex items-center justify-center rounded-md bg-purple-700 shadow-lg hover:shadow-purple-700/50 cursor-pointer overflow-hidden">
+                <span>
+                  <FaGithub />
+                </span>
+              </div>
             </div>
           </form>
         </div>

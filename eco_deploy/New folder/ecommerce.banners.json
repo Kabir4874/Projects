@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "66bf47967a10dd2fd11eea06"
+  },
+  "productId": {
+    "$oid": "66bf321af3b0a7f6295cc9da"
+  },
+  "banner": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1723811733/banners/tik7e3f4kvfucwmak0iw.jpg",
+  "link": "HAYLOU-RS4-Plus",
+  "createdAt": {
+    "$date": "2024-08-16T12:35:34.482Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-16T12:35:34.482Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66bf47af7a10dd2fd11eea0c"
+  },
+  "productId": {
+    "$oid": "66a0e99bab2f89a46398db88"
+  },
+  "banner": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1723811758/banners/qbcak7ij1lhwzevgbgv5.jpg",
+  "link": "Lenovo-Legion-Pro",
+  "createdAt": {
+    "$date": "2024-08-16T12:35:59.951Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-16T12:35:59.951Z"
+  },
+  "__v": 0
+}]

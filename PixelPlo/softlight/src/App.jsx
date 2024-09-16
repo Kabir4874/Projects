@@ -22,10 +22,10 @@ const App = () => {
         <Route path="/work" element={<Work />} />
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/project/:id" element={<SingleProject />} />
-        <Route path="/blog/:id" element={<SingleBlog />} />
+        <Route path="/project/:projectId" element={<SingleProject />} />
+        <Route path="/blog/:blogId" element={<SingleBlog />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/team/:id" element={<TeamSingle />} />
+        <Route path="/team/:teamId" element={<TeamSingle />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="*" element={<NoPage />} />
       </Route>

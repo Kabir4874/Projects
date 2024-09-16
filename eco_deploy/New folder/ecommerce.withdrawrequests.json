@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "66bda05a1dfeb7bc401b760c"
+  },
+  "sellerId": "66965924ec59fbac022e83da",
+  "amount": 100,
+  "status": "success",
+  "createdAt": {
+    "$date": "2024-08-15T06:29:46.155Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-15T08:14:06.932Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66bdab851dfeb7bc401b766b"
+  },
+  "sellerId": "66965924ec59fbac022e83da",
+  "amount": 900,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2024-08-15T07:17:25.436Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-15T07:17:25.436Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66bdabac1dfeb7bc401b767f"
+  },
+  "sellerId": "66965924ec59fbac022e83da",
+  "amount": 4000,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2024-08-15T07:18:04.599Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-15T07:18:04.599Z"
+  },
+  "__v": 0
+}]

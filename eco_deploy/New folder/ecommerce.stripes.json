@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "66ba2c759477afce951a00a6"
+  },
+  "sellerId": {
+    "$oid": "66965924ec59fbac022e83da"
+  },
+  "stripeId": "acct_1Pn0KGRAL7i2TKyw",
+  "code": "909bc08f-c714-4ea1-a733-7e4ad11f54fb",
+  "createdAt": {
+    "$date": "2024-08-12T15:38:29.490Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-12T15:38:29.490Z"
+  },
+  "__v": 0
+}]

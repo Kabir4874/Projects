@@ -1,0 +1,105 @@
+[{
+  "_id": {
+    "$oid": "669657d8ec59fbac022e83bb"
+  },
+  "name": "Smart Watch",
+  "image": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721128921/category/mr2t6in6zixnudlpgbrm.jpg",
+  "slug": "Smart-Watch",
+  "createdAt": {
+    "$date": "2024-07-16T11:22:00.330Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-16T11:22:00.330Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "669657e8ec59fbac022e83bd"
+  },
+  "name": "Ink",
+  "image": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721128937/category/p6pejt71usfty8cls7a2.jpg",
+  "slug": "Ink",
+  "createdAt": {
+    "$date": "2024-07-16T11:22:16.087Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-16T11:22:16.087Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "669657fbec59fbac022e83bf"
+  },
+  "name": "AC",
+  "image": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721128957/category/laxhoqbcyp2ptubb7pva.webp",
+  "slug": "AC",
+  "createdAt": {
+    "$date": "2024-07-16T11:22:35.675Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-16T11:22:35.675Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66965816ec59fbac022e83c1"
+  },
+  "name": "Laptop",
+  "image": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721128984/category/jaw115im81g4f54pe5mu.webp",
+  "slug": "Laptop",
+  "createdAt": {
+    "$date": "2024-07-16T11:23:02.960Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-16T11:23:02.960Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66965829ec59fbac022e83c3"
+  },
+  "name": "Headphone",
+  "image": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129001/category/nftfnamfeil1yrdqtlfh.jpg",
+  "slug": "Headphone",
+  "createdAt": {
+    "$date": "2024-07-16T11:23:21.067Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-16T11:23:21.067Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6696583bec59fbac022e83c5"
+  },
+  "name": "Fan",
+  "image": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129021/category/wp7trucuwxldquqzuj0k.webp",
+  "slug": "Fan",
+  "createdAt": {
+    "$date": "2024-07-16T11:23:39.520Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-16T11:23:39.520Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6696585bec59fbac022e83c7"
+  },
+  "name": "Mobile",
+  "image": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129053/category/gazm31xvuiw8ih9qhgxv.jpg",
+  "slug": "Mobile",
+  "createdAt": {
+    "$date": "2024-07-16T11:24:11.497Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-16T11:24:11.497Z"
+  },
+  "__v": 0
+}]

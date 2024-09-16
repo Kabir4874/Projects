@@ -1,0 +1,102 @@
+[{
+  "_id": {
+    "$oid": "66967135ec59fbac022e8409"
+  },
+  "name": "Tanvir Joy",
+  "email": "joy@gmail.com",
+  "password": "$2b$10$tXXZ.yrI8KxpuwOfiqdYtO.XNFoJa5SVpaaSx3QTwqtxF9.rwXFDK",
+  "method": "manually",
+  "image": "",
+  "createdAt": {
+    "$date": "2024-07-16T13:10:13.727Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-16T13:10:13.727Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a90f389978bc2bfd9b6b85"
+  },
+  "name": "Nirob Shikder",
+  "email": "nirob@gmail.com",
+  "password": "$2b$10$zNzXS7VfMz0TsQUrV4Kn5e9.ullpBfEthSgIvDiTw8IRrCsLOSsOq",
+  "method": "manually",
+  "image": "",
+  "createdAt": {
+    "$date": "2024-07-30T16:05:12.393Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-30T16:05:12.393Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ab1b72d950dd80b63d0fc8"
+  },
+  "name": "Shifat Mahmud",
+  "email": "shifat@gmail.com",
+  "password": "$2b$10$29L7Hg..cNiyydXWmfv00.tzC1Imi/HPNQVbtITRv5Z1U55NeZC5K",
+  "method": "manually",
+  "image": "",
+  "createdAt": {
+    "$date": "2024-08-01T05:21:54.963Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-01T05:21:54.963Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ab1c7f2e7abee311deb1af"
+  },
+  "name": "Nazifa Tabassum",
+  "email": "nazifa@gmail.com",
+  "password": "$2b$10$lO.YnRdePvpn0iuUfYfd3ODAKpc4iHDGxFXY6A02NjanGrTYV/Jpy",
+  "method": "manually",
+  "image": "",
+  "createdAt": {
+    "$date": "2024-08-01T05:26:23.212Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-01T05:26:23.212Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ab1eeb7035a16e5c9a016f"
+  },
+  "name": "Sojib",
+  "email": "sojib@gmail.com",
+  "password": "$2b$10$l1RQqWNjSfozuM8F8oV5/OLn9g6xWmzKe8/91wOXzsbUaOAEOgOsS",
+  "method": "manually",
+  "image": "",
+  "createdAt": {
+    "$date": "2024-08-01T05:36:43.866Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-01T05:36:43.866Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ab2054ce0e14939f8f3c90"
+  },
+  "name": "Masum Mia",
+  "email": "masum@gmail.com",
+  "password": "$2b$10$LrBKX2Fy3sqVZ2O//tLVd.P9gI11oYg7l0rbvy3K4f5eZuyVyyLbe",
+  "method": "manually",
+  "image": "",
+  "createdAt": {
+    "$date": "2024-08-01T05:42:44.079Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-01T05:42:44.079Z"
+  },
+  "__v": 0
+}]

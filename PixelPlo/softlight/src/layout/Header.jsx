@@ -1,13 +1,12 @@
 import logo from "../assets/logo.svg";
 import Hover from "../assets/Hover.svg";
-import MenuIcon from "../assets/Menu Icon.svg";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 const Header = () => {
   const [nav, setNav] = useState("");
   window.addEventListener("scroll", () => {
     if (scrollY > 120) {
-      setNav("bg-white px-4 pt-4 pb-4 rounded-b-md shadow");
+      setNav("bg-white px-4 py-2 rounded-b-md shadow-sm");
     } else {
       setNav("");
     }
@@ -28,7 +27,7 @@ const Header = () => {
         <li>
           <NavLink
             to="/"
-            className="font-nunito text-lg font-medium text-tarawera"
+            className="font-nunito text-lg font-medium text-tarawera hover:text-black relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-tarawera after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
           >
             Home
           </NavLink>
@@ -36,7 +35,7 @@ const Header = () => {
         <li>
           <NavLink
             to={"/about"}
-            className="font-nunito text-lg font-medium text-tarawera"
+            className="font-nunito text-lg font-medium text-tarawera hover:text-black relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-tarawera after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
           >
             About
           </NavLink>
@@ -44,29 +43,65 @@ const Header = () => {
         <li>
           <NavLink
             to={"/work"}
-            className="font-nunito text-lg font-medium text-tarawera"
+            className="font-nunito text-lg font-medium text-tarawera hover:text-black relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-tarawera after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
           >
-            Work
+            Portfolio
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink
             to={"/news"}
             className="font-nunito text-lg font-medium text-tarawera"
           >
             News
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink
             to={"/contact"}
-            className="font-nunito text-lg font-medium text-tarawera"
+            className="font-nunito text-lg font-medium text-tarawera hover:text-black relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-tarawera after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
           >
             Contact
           </NavLink>
         </li>
-        <li className=" cursor-pointer">
-          <img src={MenuIcon} alt="" />
+        <li className=" cursor-pointer group">
+          <svg
+            width="59"
+            height="58"
+            viewBox="0 0 59 58"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="29.4001"
+              cy="29.0002"
+              r="28.6081"
+              stroke="#D5D5D5"
+              className=" group-hover:stroke-tarawera transition-all duration-300"
+              stroke-width="0.5"
+            />
+            <rect
+              x="16.9033"
+              y="28.0249"
+              width="25"
+              height="2"
+              fill="#08364A"
+            />
+            <rect
+              x="29.46"
+              y="21.9492"
+              width="12.4168"
+              height="2"
+              fill="#08364A"
+            />
+            <rect
+              x="16.8965"
+              y="34.0513"
+              width="12.4168"
+              height="2"
+              fill="#08364A"
+            />
+          </svg>
         </li>
       </ul>
     </nav>

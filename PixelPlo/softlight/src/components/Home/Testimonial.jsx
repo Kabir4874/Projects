@@ -1,16 +1,20 @@
 import Stroke from "../../assets/Stroke.svg";
-import test1 from "../../assets/test1.png";
-import test2 from "../../assets/test2.png";
-import test3 from "../../assets/test3.png";
 import quote from "../../assets/quote.svg";
 import { useState } from "react";
-import { testimonialData } from "../../data/homeData";
-
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { get_reviews } from '../../store/reducers/homeReducer'
 const Testimonial = () => {
+  const dispatch = useDispatch();
   const [toggleState, setToggleState] = useState(2);
+  const { reviews } = useSelector((state) => state.home);
   const toggleTab = (index) => {
     setToggleState(index);
   };
+  useEffect(() => {
+    dispatch(get_reviews());
+  }, []);
+
   return (
     <div className="w-[58.9375rem] mx-auto mt-[3.26rem]">
       <div className=" w-full relative">
@@ -20,7 +24,7 @@ const Testimonial = () => {
             <img src={quote} alt="" className="w-full" />
           </div>
           <p className=" text-jaguar text-center font-nunito text-[1.5625rem]">
-            {testimonialData[toggleState - 1].text}
+            {reviews[toggleState - 1]?.review}
           </p>
         </div>
       </div>
@@ -30,23 +34,23 @@ const Testimonial = () => {
           onClick={() => (toggleState === 1 ? toggleTab(2) : toggleTab(1))}
         >
           <img
-            src={toggleState === 1 ? test2 : test1}
+            src={toggleState === 1 ? reviews[1]?.image : reviews[0]?.image}
             alt=""
-            className="w-[112px] mt-9"
+            className="w-[112px] h-[112px] mt-9 rounded-full"
           />
         </div>
         <div className="flex flex-col items-center justify-center">
           <img
-            src={testimonialData[toggleState - 1].image}
+            src={reviews[toggleState - 1]?.image}
             alt=""
-            className="w-[174.67px]"
+            className="w-[174.67px] h-[174.67px] rounded-full"
           />
           <div className="mt-4 flex flex-col items-center justify-center">
             <h4 className=" text-jaguar font-syne text-[1.875rem] font-medium mb-[0.12rem]">
-              {testimonialData[toggleState - 1].name}
+              {reviews[toggleState - 1]?.clientName}
             </h4>
             <p className=" text-jaguar font-nunito text-lg">
-              {testimonialData[toggleState - 1].designation}
+              {reviews[toggleState - 1]?.clientDesignation}
             </p>
           </div>
         </div>
@@ -55,9 +59,9 @@ const Testimonial = () => {
           onClick={() => (toggleState === 3 ? toggleTab(2) : toggleTab(3))}
         >
           <img
-            src={toggleState === 3 ? test2 : test3}
+            src={toggleState === 3 ? reviews[1]?.image : reviews[2]?.image}
             alt=""
-            className="w-[112px] mt-9"
+            className="w-[112px] h-[112px] mt-9 rounded-full"
           />
         </div>
       </div>

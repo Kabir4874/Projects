@@ -1,0 +1,165 @@
+[{
+  "_id": {
+    "$oid": "669658b3ec59fbac022e83cf"
+  },
+  "myId": "669658b3ec59fbac022e83cd",
+  "myFriends": [
+    {
+      "fdId": "66ab2054ce0e14939f8f3c90",
+      "name": "Masum Mia",
+      "image": ""
+    },
+    {
+      "fdId": "66ab1eeb7035a16e5c9a016f",
+      "name": "Sojib",
+      "image": ""
+    },
+    {
+      "fdId": "66ab1c7f2e7abee311deb1af",
+      "name": "Nazifa Tabassum",
+      "image": ""
+    },
+    {
+      "fdId": "66ab1b72d950dd80b63d0fc8",
+      "name": "Shifat Mahmud",
+      "image": ""
+    },
+    {
+      "fdId": "66a90f389978bc2bfd9b6b85",
+      "name": "Nirob Shikder",
+      "image": ""
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-07-16T11:25:39.237Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-01T13:20:12.317Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66965924ec59fbac022e83dc"
+  },
+  "myId": "66965924ec59fbac022e83da",
+  "myFriends": [
+    {
+      "fdId": "66a90f389978bc2bfd9b6b85",
+      "name": "Nirob Shikder",
+      "image": ""
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-07-16T11:27:32.849Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-31T08:30:01.200Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a90f389978bc2bfd9b6b87"
+  },
+  "myId": "66a90f389978bc2bfd9b6b85",
+  "myFriends": [
+    {
+      "fdId": "669658b3ec59fbac022e83cd",
+      "name": "Rakib Fashion",
+      "image": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129198/profile/dymzqgjcigxxnkehxnma.jpg"
+    },
+    {
+      "fdId": "66965924ec59fbac022e83da",
+      "name": "Abid Fashion",
+      "image": ""
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-07-30T16:05:12.397Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-01T05:21:04.905Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ab1b72d950dd80b63d0fca"
+  },
+  "myId": "66ab1b72d950dd80b63d0fc8",
+  "myFriends": [
+    {
+      "fdId": "669658b3ec59fbac022e83cd",
+      "name": "Rakib Fashion",
+      "image": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129198/profile/dymzqgjcigxxnkehxnma.jpg"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-08-01T05:21:54.965Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-01T05:24:34.396Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ab1c7f2e7abee311deb1b1"
+  },
+  "myId": "66ab1c7f2e7abee311deb1af",
+  "myFriends": [
+    {
+      "fdId": "669658b3ec59fbac022e83cd",
+      "name": "Rakib Fashion",
+      "image": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129198/profile/dymzqgjcigxxnkehxnma.jpg"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-08-01T05:26:23.217Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-01T05:37:33.622Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ab1eeb7035a16e5c9a0171"
+  },
+  "myId": "66ab1eeb7035a16e5c9a016f",
+  "myFriends": [
+    {
+      "fdId": "669658b3ec59fbac022e83cd",
+      "name": "Rakib Fashion",
+      "image": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129198/profile/dymzqgjcigxxnkehxnma.jpg"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-08-01T05:36:43.870Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-01T05:41:32.542Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ab2054ce0e14939f8f3c92"
+  },
+  "myId": "66ab2054ce0e14939f8f3c90",
+  "myFriends": [
+    {
+      "fdId": "669658b3ec59fbac022e83cd",
+      "name": "Rakib Fashion",
+      "image": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129198/profile/dymzqgjcigxxnkehxnma.jpg"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-08-01T05:42:44.083Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-01T13:20:12.315Z"
+  },
+  "__v": 0
+}]

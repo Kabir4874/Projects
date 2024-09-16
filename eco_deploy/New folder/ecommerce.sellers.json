@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "669658b3ec59fbac022e83cd"
+  },
+  "name": "Rakib Kahn",
+  "email": "raselkhan1@gmail.com",
+  "password": "$2b$10$AGVAICF7cAuaeOPoSlXdDODWfl4S9UUTawKGxrXkfAfvZ7AQf8.xe",
+  "role": "seller",
+  "status": "active",
+  "payment": "inactive",
+  "method": "manually",
+  "image": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1721129198/profile/dymzqgjcigxxnkehxnma.jpg",
+  "createdAt": {
+    "$date": "2024-07-16T11:25:39.234Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-16T11:28:43.883Z"
+  },
+  "__v": 0,
+  "shopInfo": {
+    "shopName": "Rakib Fashion",
+    "division": "Dhaka",
+    "district": "Dhaka",
+    "subDistrict": "Dhaka"
+  }
+},
+{
+  "_id": {
+    "$oid": "66965924ec59fbac022e83da"
+  },
+  "name": "Abid Khan",
+  "email": "abid@gmail.com",
+  "password": "$2b$10$Bza3zTPIPS8KtExO.IgY4Osb62dxSaEf9dLRE/cjtzQwWaLEh3pkO",
+  "role": "seller",
+  "status": "active",
+  "payment": "active",
+  "method": "manually",
+  "image": "http://res.cloudinary.com/dp4jxt1xr/image/upload/v1723477083/profile/fgn1sccjmmxei0kyk0gi.jpg",
+  "createdAt": {
+    "$date": "2024-07-16T11:27:32.847Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-12T15:41:56.415Z"
+  },
+  "__v": 0,
+  "shopInfo": {
+    "shopName": "Abid Fashion",
+    "division": "Dhaka",
+    "district": "Dhaka",
+    "subDistrict": "Dhaka"
+  }
+}]

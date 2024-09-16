@@ -1,4 +1,5 @@
 import right from "../../assets/Pattern.svg";
+import HeroReverseButton from "../HeroReverseButton";
 const NewsLetter = () => {
   return (
     <div className=" w-full bg-jaguar py-[9.69rem] mt-[8.45rem]">
@@ -18,9 +19,9 @@ const NewsLetter = () => {
             placeholder="enter your e-mail address..."
             className="w-[21.875rem] py-4 px-4 rounded-[2.5rem] border border-alto3 placeholder:text-boulder2 placeholder:font-nunito placeholder:text-[0.875rem]"
           />
-          <button className=" capitalize py-[0.56rem] px-[1.12rem] border border-white flex items-center justify-center gap-[0.625rem] rounded-[2.5rem] bg-jaguar text-white font-nunito text-[0.875rem] font-bold">
-            Subscribe <img src={right} alt="" />
-          </button>
+          <div className=" inline-block">
+            <HeroReverseButton text={"Subscribe"} />
+          </div>
         </div>
       </div>
     </div>

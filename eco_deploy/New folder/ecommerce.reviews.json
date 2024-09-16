@@ -1,0 +1,95 @@
+[{
+  "_id": {
+    "$oid": "66a7b19ca12256cffb3056b3"
+  },
+  "productId": {
+    "$oid": "669667a8ec59fbac022e8400"
+  },
+  "name": "Tanvir Joy",
+  "rating": 4,
+  "review": "best phone on market",
+  "date": "July 29, 2024",
+  "createdAt": {
+    "$date": "2024-07-29T15:13:32.540Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-29T15:13:32.540Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a7b2747fce90b67044dd6c"
+  },
+  "productId": {
+    "$oid": "669667a8ec59fbac022e8400"
+  },
+  "name": "Tanvir Joy",
+  "rating": 4,
+  "review": "good display phone",
+  "date": "July 29, 2024",
+  "createdAt": {
+    "$date": "2024-07-29T15:17:08.537Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-29T15:17:08.537Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a7b3e07fce90b67044dda4"
+  },
+  "productId": {
+    "$oid": "669667a8ec59fbac022e8400"
+  },
+  "name": "Tanvir Joy",
+  "rating": 5,
+  "review": "best",
+  "date": "July 29, 2024",
+  "createdAt": {
+    "$date": "2024-07-29T15:23:12.272Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-29T15:23:12.272Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a8cd72be3eb9beaa7516ec"
+  },
+  "productId": {
+    "$oid": "669667a8ec59fbac022e8400"
+  },
+  "name": "Tanvir Joy",
+  "rating": 1,
+  "review": "low battery life",
+  "date": "July 30, 2024",
+  "createdAt": {
+    "$date": "2024-07-30T11:24:34.637Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-30T11:24:34.637Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a8ce27be3eb9beaa75171d"
+  },
+  "productId": {
+    "$oid": "669667a8ec59fbac022e8400"
+  },
+  "name": "Tanvir Joy",
+  "rating": 2,
+  "review": "charging problem",
+  "date": "July 30, 2024",
+  "createdAt": {
+    "$date": "2024-07-30T11:27:35.158Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-30T11:27:35.158Z"
+  },
+  "__v": 0
+}]
